@@ -1,0 +1,56 @@
+@import "../../../sass/settings.scss";
+
+@keyframes loading-video {
+    from {
+        background-color: #AFAFAF;
+    }
+    to {
+        background-color: #4F4F4F;
+    }
+}
+
+.youtube-video-iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    width: 100%;
+    display: block;
+
+    animation-name: loading-video;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.youtube-video-iframe {
+    position: absolute;
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+
+    opacity: 0;
+    transform: scale(1.5);
+
+    transition:
+        transform calc(var(--transition-duration) * 2),
+        opacity calc(var(--transition-duration) * 4);
+}
+
+.youtube-video-iframe.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (--tablet-max) {
+    /* On mobile devices, the user needs to tap play for the video to start */
+    .youtube-video-iframe {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

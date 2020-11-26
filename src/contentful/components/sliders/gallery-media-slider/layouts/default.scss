@@ -1,0 +1,205 @@
+@import "../../../../../sass/settings.scss";
+
+.gallery-media-slider-layout-default {
+    --slider-length: 4;
+    --slide-width: calc(100vw / var(--slider-length));
+    --slide-aspect-ratio: 1.24;
+    --slide-height: calc(var(--slide-width) * var(--slide-aspect-ratio));
+
+    @media (--content-min) {
+        --slide-width: calc(var(--content-max-size) / var(--slider-length));
+    }
+
+    @media (--phone-max) {
+        --slider-length: 2;
+    }
+}
+
+.gallery-media-slider-layout-default.gallery-media-slider-container {
+    position: relative;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    overflow: hidden;
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-light-grey-background);
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-wrapper {
+    position: relative;
+    margin-top: 5rem;
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider {
+    position: relative;
+    width: 100vw;
+    max-width: var(--content-max-size);
+    height: var(--slide-height);
+
+    margin: auto;
+}
+.gallery-media-slider-icon {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: 43%;
+    left: 38%;
+    z-index: 2;
+    @media (--phone-max) {
+        width: 5rem;
+        height: 5rem;
+        top: 35%;
+        left: 35%;
+    }
+}
+
+/* Slide */
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+
+    width: var(--slide-width);
+    height: var(--slide-height);
+
+    transition:
+        z-index var(--transition-duration),
+        opacity var(--transition-duration),
+        left var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide.visible {
+    opacity: 1;
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide:hover {
+    z-index: 3;
+
+    transition:
+        transform var(--transition-duration);
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide-image-wrapper {
+    overflow: hidden;
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide-image {
+    transform: scale(1);
+
+    transition:
+        transform var(--transition-duration),
+        filter calc(var(--transition-duration) / 2.5);
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide:hover .gallery-media-slider-slide-image {
+    @media (--tablet-min) {
+        transform: scale(1.1);
+    }
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide-image {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 124%; // container aspect ratio
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-arrows {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 5rem;
+}
+
+.gallery-media-slider-layout-default .gallery-media-slider-slide-card {
+    --card-margin: 2rem;
+
+    z-index: 2;
+    position: absolute;
+    top: calc(-1 * var(--card-margin));
+    left: calc(-1 * var(--card-margin));
+
+    width: calc(100% + 2 * var(--card-margin));
+    height: calc(100% + 2 * var(--card-margin));
+
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+
+    transition:
+        opacity var(--transition-duration),
+        visibility var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+@media (--tablet-min) {
+    .gallery-media-slider-layout-default .gallery-media-slider-slide:hover .gallery-media-slider-slide-card {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+
+        transition:
+            opacity calc(var(--transition-duration) / 2),
+            visibility calc(var(--transition-duration) / 2),
+            transform var(--transition-duration);
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-slide.first-slide:hover .gallery-media-slider-slide-card {
+        transform: scale(1) translateX(calc(2 * var(--card-margin)));
+    }
+    .gallery-media-slider-layout-default .gallery-media-slider-slide.last-slide:hover .gallery-media-slider-slide-card {
+        transform: scale(1) translateX(calc(-2 * var(--card-margin)));
+    }
+}
+
+@media (--laptop-max) {
+    .gallery-media-slider-layout-default .gallery-media-slider-slide-card {
+        --card-margin: 1.5rem;
+    }
+}
+
+@media (--phone-max) {
+    .gallery-media-slider-layout-default.gallery-media-slider-container .section-title {
+        margin-bottom: 5rem;
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-slide {
+        width: 50vw;
+        max-width: 50vw;
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-slide.first-slide {
+        z-index: 5;
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-arrows {
+        justify-content: center;
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-slide-card {
+        left: calc(-50% - var(--card-margin));
+        width: calc(150% + var(--card-margin));
+        height: calc(100% + var(--card-margin));
+        opacity: 0;
+
+        transform: scale(.95) translateX(50%);
+    }
+
+    .gallery-media-slider-layout-default .gallery-media-slider-slide.first-slide .gallery-media-slider-slide-card {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateX(50%);
+    }
+}

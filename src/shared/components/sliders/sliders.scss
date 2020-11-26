@@ -1,0 +1,33 @@
+@import "../../../sass/settings.scss";
+
+.slick-dots {
+    z-index: 5;
+}
+
+.default-slider-dots ul {
+    display: flex;
+}
+
+.default-slider-dots li {
+    display: block;
+    cursor: auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 1rem;
+    border-radius: 1.6rem;
+
+    background-color: var(--color-light-grey);
+
+    transition: background-color var(--transition-duration);
+}
+
+.default-slider-dots li.slick-active {
+    background-color: var(--color-main);
+}
+
+@media (--laptop-max) {
+    .default-slider-dots {
+        opacity: 0;
+        visibility: none;
+    }
+}

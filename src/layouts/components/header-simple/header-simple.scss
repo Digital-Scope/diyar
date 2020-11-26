@@ -1,0 +1,21 @@
+header.header-simple {
+    height: var(--header-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.header-simple.blend {
+    margin-bottom: calc(-1 * var(--header-height));
+}
+
+.header-simple-image {
+    height: 65%;
+    display: inline-block;
+}
+
+.header-simple-image img {
+    height: 100%;
+    pointer-events: auto;
+}

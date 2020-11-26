@@ -1,0 +1,195 @@
+{
+    "pageTitles": {
+        "careers": "Careers",
+        "contactUs": "Contact Us"
+    },
+    "latestArticles": {
+        "readMore": "Read more",
+        "mainHeader": "Latest Articles"
+    },
+    "subscriptionForm": {
+        "inputPlaceholder": "Enter your email"
+    },
+    "newsletterForm": {
+        "inputPlaceholder": "Enter your email address",
+        "title": "Register to our newsletter",
+        "submit": "Submit",
+        "checkNews": "Check NewsLetter",
+        "link": "/newsletter/index.html",
+        "successMsg": "Thank you! Your registry is successful.",
+        "errorMsg": "Please enter a valid email address."
+    },
+
+
+    "filter": {
+        "filterLabel": "Filter By",
+        "select": "No filter",
+        "noResult": "No result to be shown"
+    },
+    "mediaCenter": {
+        "pageTitle": "Media Center | Diyar Al Muharraq",
+        "pageDescription": "Diyar Al Muharraq's media gallery is a unique gateway to images and videos illustrating news, updates, management team and much more.",
+        "title": "Media Center",
+        "selections": {
+            "dates": [
+                {
+                    "value": "this month",
+                    "text": "This Month"
+                },
+                {
+                    "value": "last month",
+                    "text": "Last Month"
+                },
+                {
+                    "value": "last 3 months",
+                    "text": "Last 3 Months"
+                },
+                {
+                    "value": "this year",
+                    "text": "This Year"
+                },
+                {
+                    "value": "last year",
+                    "text": "Last Year"
+                }
+            ],
+            "departments": [
+                {
+                    "value": "residential",
+                    "text": "Residential"
+                },
+                {
+                    "value": "commercial",
+                    "text": "Commercial"
+                }
+            ],
+            "mediaType": [
+                {
+                    "value": "articles",
+                    "text": "Articles"
+                },
+                {
+                    "value": "news",
+                    "text": "News"
+                }
+            ]
+        },
+        "placeholders": {
+            "date": "Date posted",
+            "department": "Department",
+            "mediaType": "Media Type"
+        }
+    },
+    "loadMore": "Load more",
+    "formValidation": {
+        "required": "This field is required",
+        "emailFormat": "Wrong email format",
+        "phoneFormat": "Wrong phone format",
+        "fileSize": "File size must be less than 10Mb",
+        "fileType": "Allowed file types are '.pdf', '.doc' and '.docx'"
+    },
+    "careersListing": {
+        "applyButtonText": "Apply"
+    },
+    "formControls": {
+        "nextInputActionText": "Ok",
+        "nextInputActionHelper": "Press Enter"
+    },
+    "careersForm": {
+        "title": "Apply Now",
+        "subtitle": "Please fill out the following inquiry form with your information:",
+        "submitButtonText": "Apply",
+        "fields": {
+            "name": {
+                "label": "My name is",
+                "placeholder": ""
+            },
+            "email": {
+                "label": "My email is",
+                "placeholder": "mail@site.com"
+            },
+            "phone": {
+                "label": "My Phone",
+                "placeholder": ""
+            },
+            "coverLetter": {
+                "label": "Cover Letter",
+                "placeholder": ""
+            },
+            "cv": {
+                "label": "CV/Resume",
+                "placeholder": "Please upload your CV/Resume"
+            }
+        },
+        "formSuccess": "We successfully received your data. Thank you for your interest in Diyar al muharraq",
+        "formFailure": "Cannot connect to the server. Please try again later."
+    },
+    "contactUsData": {
+        "Fax": "Fax",
+        "Tel": "Tel"
+    },
+    "contactUsForm": {
+        "displayTitle": "",
+        "subtitle": "",
+        "fields": {
+            "firstName": {
+                "label": "First name",
+                "placeholder": ""
+            },
+            "lastName": {
+                "label": "Last name",
+                "placeholder": ""
+            },
+            "name": {
+                "label": "Last name",
+                "placeholder": ""
+            },
+            "email": {
+                "label": "My email is",
+                "placeholder": "mail@site.com"
+            },
+            "phone": {
+                "label": "My Phone",
+                "placeholder": ""
+            },
+            "countryCode": {
+                "label": "Country",
+                "placeholder": ""
+            },
+            "inquiryType": {
+                "label": "I'm looking for",
+                "placeholder": ""
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Message"
+            }
+        },
+        "submitButtonText": "Submit",
+        "formSuccess": "Thank you for your inquiry. We will reply back to you as soon as possible.",
+        "formFailure": "Cannot connect to the server. Please try again later."
+    },
+    "projectsList": {
+        "ctaText": "Discover More"
+    },
+    "projectDetails": {
+        "takeATour": {
+            "title": "Take a tour with us"
+        }
+    },
+    "download-files": {
+        "download": "Download"
+    },
+    "search-results": {
+        "title": "Search Results",
+        "heading": "Results for {0}",
+        "searchResultCount": "{0} Results found",
+        "newsLink": "Visit News",
+        "articleLink": "Visit Article",
+        "pageLink": "Visit Page",
+        "jobPostLink": "Visit Job Post"
+    },
+    "landingPage": {
+        "cta": "Register Interest"
+    }
+}

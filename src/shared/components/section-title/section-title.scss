@@ -1,0 +1,37 @@
+@import "../../../sass/settings.scss";
+
+.section-title {
+    margin-bottom: 3rem;
+
+    &-title {
+        font-size: 3rem;
+        font-weight: var(--font-weight-light);
+        margin-bottom: 1.5rem;
+        color: var(--color-dark-text);
+        line-height: 1.4;
+    }
+
+    &-underline {
+        height: 0.8rem;
+        width: 7rem;
+        background-color: var(--color-light-grey);
+        display: inline-block;
+    }
+}
+
+
+@media (--laptop-max) {
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .section-title-title {
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-title-underline {
+        height: 0.4rem;
+        width: 3rem;
+    }
+}

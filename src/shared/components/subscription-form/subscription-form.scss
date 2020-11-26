@@ -1,0 +1,45 @@
+@import "../../../sass/settings.scss";
+
+form.subscription-form {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px var(--color-white-text) solid;
+    padding-bottom: .4rem;
+}
+
+form.subscription-form input {
+    padding-right: 2rem;
+    flex-grow: 1;
+
+    font-weight: var(--font-weight-bold);
+    font-size: 1.6rem;
+    color: var(--color-white-text);
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+form.subscription-form input::placeholder {
+    font-weight: var(--font-weight-bold);
+    font-size: 1.6rem;
+    color: var(--color-white-text);
+    text-align: justify;
+    text-transform: uppercase;
+
+    transition: color var(--transition-duration)
+}
+
+form.subscription-form input:focus::placeholder {
+    color: var(--color-light-text);
+}
+
+
+form.subscription-form button {
+    color: var(--color-white-text);
+    width: 2.3rem;
+    height: .8rem;
+}
+form.subscription-form button svg {
+    height: 100%;
+    width: 100%;
+}

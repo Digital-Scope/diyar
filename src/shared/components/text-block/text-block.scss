@@ -1,0 +1,39 @@
+@import "../../../sass/settings.scss";
+
+.text-block {
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-light);
+    line-height: 3.6rem;
+    color: var(--color-text);
+}
+
+.text-block ul {
+    padding-left: 2em;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.text-block ul > li {
+    list-style-type: disc;
+}
+
+.text-block ol > li {
+    margin-bottom: 1rem;
+}
+
+.text-block h1 {
+    line-height: 5rem;
+    margin-bottom: 3rem;
+}
+
+@media (--laptop-max) {
+    .text-block {
+        line-height: 2.5rem;
+    }
+
+    .text-block h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+}

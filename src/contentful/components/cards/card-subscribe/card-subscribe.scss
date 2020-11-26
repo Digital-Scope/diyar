@@ -1,0 +1,24 @@
+@import "../../../../sass/_settings.scss";
+
+.card-subscribe {
+    position: relative;
+
+    padding: 3.5rem 3.5rem;
+
+    background-color: var(--color-dark-grey-background);
+
+    font-weight: var(--font-weight-light);
+    color: var(--color-white-text);
+    line-height: 1.5;
+}
+
+.card-subscribe-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-subscribe-description {
+    letter-spacing: 0;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}

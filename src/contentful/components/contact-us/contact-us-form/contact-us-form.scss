@@ -1,0 +1,22 @@
+@import "../../../../sass/settings.scss";
+
+.contact-us-form-subtitle {
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-light);
+    line-height: 2.25;
+    color: var(--color-text);
+    margin-top: -2.5rem;
+
+    @media(--laptop-max) {
+        margin-bottom: 4rem;
+    }
+}
+
+.contact-us-form-wrapper-section .contact-us-form-container {
+    width: 50%;
+    margin-bottom: 6rem;
+
+    @media(--laptop-max) {
+        width: 100%;
+    }
+}

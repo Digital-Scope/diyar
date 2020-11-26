@@ -1,0 +1,77 @@
+{
+  "name": "Content - Subscription",
+  "description": "",
+  "displayField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "subscriptionId",
+      "name": "Subscription Id",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [
+        {
+          "unique": true
+        }
+      ],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "ue7ue4ps9aos"
+      }
+    },
+    "id": "contentSubscription",
+    "type": "ContentType",
+    "createdAt": "2018-09-18T06:53:16.142Z",
+    "updatedAt": "2018-09-18T06:53:16.842Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "4BZaV9gorncy1Cg4l0ZPQW"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "4BZaV9gorncy1Cg4l0ZPQW"
+      }
+    },
+    "publishedCounter": 1,
+    "version": 2,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "4BZaV9gorncy1Cg4l0ZPQW"
+      }
+    },
+    "publishedVersion": 1,
+    "firstPublishedAt": "2018-09-18T06:53:16.842Z",
+    "publishedAt": "2018-09-18T06:53:16.842Z"
+  }
+}

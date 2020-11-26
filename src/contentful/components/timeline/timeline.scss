@@ -1,0 +1,24 @@
+@import "../../../sass/settings.scss";
+
+.timeline {
+    position: relative;
+    padding: 22rem 0 10rem 0;
+    margin: 5rem 0;
+
+    overflow: hidden;
+}
+
+.timeline-arrows {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media (--laptop-min) {
+    .timeline-arrows {
+        display: none;
+    }
+}

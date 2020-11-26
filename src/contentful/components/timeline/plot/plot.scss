@@ -1,0 +1,374 @@
+@import "../../../../sass/settings.scss";
+
+.timeline-plot-axis {
+    position: relative;
+}
+
+.timeline-plot-axis-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+
+    background-color: #DFDFDF;
+}
+
+.timeline-plot {
+    display: flex;
+    justify-content: center;
+
+    height: var(--year-size, 2rem);
+}
+
+/* Year */
+
+.timeline-plot-year {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: calc(-.5 * var(--year-size, 1rem));
+
+    cursor: pointer;
+    color: #A9A9A9;
+}
+
+.timeline-plot-year::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(var(--year-size, 1rem) + var(--year-spacing, 1rem));
+    height: 10rem;
+
+    transform: translate(-50%, -50%);
+}
+
+.timeline-plot-year.active {
+    color: var(--color-text);
+}
+
+.timeline-plot-year-marker {
+    position: relative;
+    height: var(--year-size, 1rem);
+    width: var(--year-size, 1rem);
+    border: .3rem solid #DFDFDF;
+    border-radius: var(--year-size, 1rem);
+    background-color: white;
+    z-index: 2;
+
+    transition: border var(--transition-duration);
+}
+
+.timeline-plot-year-number {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    font-weight: var(--font-weight-light);
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    text-align: center;
+
+    transform: translateX(calc(-50% + var(--year-size, 1rem) / 2));
+
+    transition:
+        color var(--transition-duration),
+        font-weight var(--transition-duration);
+}
+
+.timeline-plot-year.active .timeline-plot-year-marker {
+    border-color: var(--color-text);
+    transition-delay: var(--transition-duration);
+}
+.timeline-plot-year.active .timeline-plot-year-number {
+    font-weight: var(--font-weight-semi-bold);
+    transition-delay: var(--transition-duration);
+}
+
+/* Events */
+
+.timeline-plot-events {
+    position: absolute;
+    left: 0;
+    height: var(--event-size, 1.8rem);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        visibility var(--transition-duration),
+        opacity var(--transition-duration);
+}
+
+.timeline-plot-year.active .timeline-plot-events {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timeline-plot-events::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--year-size, 1rem) / 2);
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+
+    background-color: transparent;
+
+    transition:
+        transform var(--transition-duration),
+        background-color var(--transition-duration);
+}
+
+.timeline-plot-year.active .timeline-plot-events::before {
+    transform: scaleX(1);
+    background-color: var(--color-text);
+
+    transition-delay: var(--transition-duration);
+}
+
+.timeline-plot-event {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+
+    height: var(--year-size, 1.1rem);
+    width: var(--event-size, 1.8rem);
+
+    opacity: 0;
+}
+
+.timeline-plot-event.active {
+    z-index: 5;
+}
+
+.timeline-plot-event::before {
+    position: absolute;
+    content: '';
+    top: var(--event-size, 1.8rem);
+    left: calc(var(--event-size, 1.8rem) / 2);
+
+    height: calc(var(--event-size, 1.8rem) * 8);
+    width: calc(var(--event-size, 1.8rem) + var(--event-spacing, 1.5rem));
+
+    transform: translate(-50%, calc(-100% + 1rem));
+}
+
+.timeline-plot-year.active .timeline-plot-event {
+    opacity: 1;
+}
+
+.timeline-plot-event-date {
+    position: absolute;
+    width: calc(var(--event-size, 1.8rem) * 5.5);
+    left: calc(var(--event-size, 1.8rem) / 2);
+
+    font-size: calc(var(--event-size, 1.8rem) * .7);
+    opacity: 1;
+
+    transform-origin: left;
+    transform: rotate(-90deg) translateX(calc(var(--event-size, 1.8rem) + .5rem));
+
+    transition:
+        opacity var(--transition-duration) var(--transition-duration);
+}
+
+.timeline-plot-event.active .timeline-plot-event-date {
+    opacity: 0;
+    transform: rotate(-90deg) translateX(0);
+
+    transition:
+        opacity var(--transition-duration) 0ms,
+        transform var(--transition-duration) 0ms;
+}
+
+.timeline-plot-event-point {
+    --border-size: .2rem;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: var(--event-size, 1.8rem);
+    height: var(--event-size, 1.8rem);
+    border: var(--border-size) solid white;
+    border-radius: 100%;
+    background-color: var(--color-text);
+
+    transform: translateY(-50%);
+
+    transition: background-color var(--transition-duration);
+}
+
+.timeline-plot-event.active .timeline-plot-event-point {
+    background-color: var(--color-main);
+    transition-delay: var(--transition-duration);
+}
+
+.timeline-plot-event-active-line {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: calc(var(--event-size, 1.8rem) / 2);
+
+    width: 1px;
+    height: calc(var(--event-size, 1.8rem) * 12);
+    background-color: var(--color-grey);
+
+    transform-origin: bottom;
+    transform: scaleY(0);
+
+    transition: transform var(--transition-duration);
+}
+
+.timeline-plot-event.active .timeline-plot-event-active-line {
+    transform: scaleY(1);
+    transition-delay: var(--transition-duration);
+}
+
+
+@keyframes info-in {
+    from { opacity: 0; transform: translateY(100%) translateX(-10px); }
+    to { opacity: 1; transform: translateY(100%) translateX(0); }
+}
+@keyframes info-out {
+    from { opacity: 1; transform: translateY(100%); }
+    to { opacity: 0; transform: translateY(calc(100% + 20px)); }
+}
+
+@keyframes info-in-second-half {
+    from { opacity: 0; transform: translateY(100%) translateX(10px); }
+    to { opacity: 1; transform: translateY(100%) translateX(0); }
+}
+@keyframes info-out-second-half {
+    from { opacity: 1; transform: translateY(100%); }
+    to { opacity: 0; transform: translateY(calc(100% + 20px)); }
+}
+
+.timeline-plot-event-active-info {
+    position: absolute;
+    width: 25rem;
+    padding: 0 1rem;
+    left: calc(var(--event-size, 1.8rem) / 2);
+    bottom: calc(var(--event-size, 1.8rem) * 12);
+    opacity: 0;
+
+    animation-name: info-out;
+    animation-duration: calc(var(--transition-duration) / 2);
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.timeline-plot-event.active .timeline-plot-event-active-info {
+    animation-name: info-in;
+    animation-duration: var(--transition-duration);
+    animation-delay: calc(var(--transition-duration) * 2);
+}
+
+.timeline-plot-event-active-info-date {
+    font-weight: var(--font-weight-light);
+    font-size: 2.4rem;
+    color: var(--color-main);
+    letter-spacing: 0;
+    line-height: 1.2;
+    background-color: white;
+}
+
+.timeline-plot-event-active-info-title {
+    font-weight: var(--font-weight-light);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    letter-spacing: 0;
+    background-color: white;
+    opacity: 0;
+    transform: translateX(-5px);
+
+    transition:
+        opacity var(--transition-duration),
+        transform var(--transition-duration);
+
+    box-shadow: 0 1rem 1rem 0 white;
+}
+
+.timeline-plot-event.active .timeline-plot-event-active-info-title {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(var(--transition-duration) * 2);
+}
+
+@media (--tablet-max) {
+    .timeline-plot-event-active-info {
+        width: 16rem;
+    }
+
+    .timeline-plot-event-active-info-date {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+}
+
+@media (--phone-max) {
+    .timeline-plot-event.second-half .timeline-plot-event-active-info {
+        right: calc(var(--event-size, 1.8rem) / 2);
+        left: auto;
+        text-align: right;
+
+        animation-name: info-out-second-half;
+    }
+    .timeline-plot-event.active.second-half .timeline-plot-event-active-info {
+        animation-name: info-in-second-half;
+    }
+
+    .timeline-plot-event.second-half .timeline-plot-event-active-info-title {
+        transform: translateX(5px);
+    }
+    .timeline-plot-event.active.second-half .timeline-plot-event-active-info-title {
+        transform: translateX(0);
+    }
+}
+
+// DEBUG
+
+.debug .timeline-plot::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 100vh;
+    width: 1px;
+    background-color: rgba(235, 138, 22, 0.3);
+}
+
+.debug .timeline-plot {
+    outline: 1px dotted rgba(1, 166, 166, 0.5);
+}
+
+.debug .timeline-plot-year {
+    outline: 1px solid rgba(1, 67, 166, 0.3);
+}
+
+.debug .timeline-plot-year::before {
+    outline: 1px dashed rgba(pink, 0.3);
+}
+
+.debug .timeline-plot-events {
+    outline: 1px dotted rgba(166, 1, 1, 0.3);
+}
+
+.debug .timeline-plot-event {
+    outline: 1px solid rgba(1, 166, 52, 0.3);
+}
+
+.debug .timeline-plot-event::before {
+    outline: 1px dashed rgba(blue, 0.3);
+}
+
+.debug .timeline-plot-event-active-info {
+    outline: 1px dotted rgba(166, 1, 1, 0.3);
+}

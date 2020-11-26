@@ -1,0 +1,99 @@
+@import "../../../sass/settings.scss";
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.cta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: .2rem;
+
+    background-color: transparent;
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 1.6rem;
+
+    transition: background-color var(--transition-duration);
+}
+
+.cta a {
+    padding: 1.3rem 8rem 1.3rem 2.4rem;
+    display: flex;
+    align-self: center;
+}
+
+.cta.cta-simple a {
+    padding: 0 6rem 0 0;
+}
+
+.cta:hover a {
+    color: white;
+}
+
+.cta-icon {
+    display: flex;
+    position: absolute;
+    right: 1.75rem;
+    top: 50%;
+
+    width: 1.75rem;
+    height: .5rem;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+}
+
+.cta-simple .cta-icon {
+    width: 2.7rem;
+    height: .8rem;
+}
+
+[dir=rtl] .cta-icon {
+    transform: rotate(180deg);
+}
+
+.cta-icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.cta.no-arrow a {
+    padding: 1.3rem 2.4rem;
+}
+.cta.no-arrow .cta-icon {
+    display: none;
+}
+
+.cta.cta-primary {
+    background-color: var(--color-main);
+    color: var(--color-white-text);
+}
+
+.cta-section.cta-primary {
+    margin-top: 3rem;
+}
+
+.cta.cta-secondary {
+    background-color: #909AA1;
+    color: var(--color-white-text);
+}
+
+@media (--laptop-max) {
+    .cta a {
+        padding: 1.3rem 5rem 1.3rem 2.4rem;
+    }
+
+    .cta.no-arrow a {
+        padding: 1rem 2.4rem;
+    }
+
+    .cta.cta-simple {
+        font-size: 11px;
+    }
+}

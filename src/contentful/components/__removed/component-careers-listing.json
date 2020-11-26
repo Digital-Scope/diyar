@@ -1,0 +1,83 @@
+{
+  "name": "Component - Careers Listing",
+  "description": "Careers filter component ",
+  "displayField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "displayTitle",
+      "name": "Display Title",
+      "type": "Symbol",
+      "localized": true,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "subtitle",
+      "name": "Subtitle",
+      "type": "Symbol",
+      "localized": true,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "ue7ue4ps9aos"
+      }
+    },
+    "id": "componentCareersListing",
+    "type": "ContentType",
+    "createdAt": "2018-08-19T11:54:22.157Z",
+    "updatedAt": "2018-09-09T06:39:59.602Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "publishedCounter": 6,
+    "version": 12,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "publishedVersion": 11,
+    "firstPublishedAt": "2018-08-19T11:54:22.956Z",
+    "publishedAt": "2018-09-09T06:39:59.602Z"
+  }
+}

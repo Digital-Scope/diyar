@@ -1,0 +1,85 @@
+@import "../../../sass/settings.scss";
+
+form.newsletter-form {
+  align-items: center;
+  padding-bottom: .4rem;
+  min-width: 25rem;
+  .newsletter-form-field {
+    margin-bottom: 2rem;
+    .form-field-group-error {
+      font-size: 1.7rem;
+    }
+  }
+  .newsletter-form-title {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 1.6rem;
+    svg {
+      width: 5rem;
+      height: 3rem;
+    }
+  }
+
+  .cta {
+    @media (--phone-max) {
+      font-size: 1.6rem;
+      float: left;
+    }
+
+    &-icon {
+      width: 2.75rem;
+      height: 1.5rem;
+
+    }
+    &-primary {
+      width: 18rem;
+      margin-bottom: 1.5rem;
+      @media (--phone-max) {
+        width: 14rem;
+      }
+
+    }
+
+    &-simple {
+      width: 21rem;
+      color:  var(--color-grey);
+      justify-content: left;
+      @media (--phone-max) {
+        padding: 1.3rem 0 0 0;
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+        .cta-icon {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+form.newsletter-form input {
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  flex-grow: 1;
+  width: 100%;
+  border-bottom: 1px var(--color-white-text) solid;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.6rem;
+  color: var(--color-white-text);
+  text-align: justify;
+
+}
+
+form.newsletter-form input::placeholder {
+  font-weight: var(--font-weight-bold);
+  font-size: 1.6rem;
+  color: var(--color-grey);
+  text-align: justify;
+  transition: color var(--transition-duration);
+  width: 100%;
+}
+
+form.newsletter-form input:focus::placeholder {
+  color: var(--color-light-text);
+}

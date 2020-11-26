@@ -1,0 +1,55 @@
+:root {
+    /* Colors */
+    --color-main: #EE3123;
+    --color-text: #6F7280;
+    --color-light-text: #C2C2C2;
+    --color-dark-text: #4F4F4F;
+    --color-white-text: #FFFFFF;
+    --color-light-grey: #D5D6DA;
+    --color-grey: #9698A3;
+    --color-grey-background: #979797;
+    --color-light-grey-background: #F5F6F9;
+    --color-dark-grey-background: #6F7280;
+    --color-dark-background: rgba(64, 64, 64, 0.5);
+
+    /* Media Queries Breakpoints */
+    --phone-min-size: 320px;
+    --phone-max-size: 575px;
+    --tablet-min-size: 576px;
+    --tablet-max-size: 767px;
+    --laptop-min-size: 768px;
+    --laptop-max-size: 991px;
+    --desktop-min-size: 992px;
+    --desktop-max-size: 1200px;
+
+    --content-max-size: 1440px;
+
+    /* Animations */
+    --transition-duration: 400ms;
+
+    /* Themes */
+    --theme-light-background: rgba(255, 255, 255, 0.97);
+    --theme-light-color: var(--color-grey);
+    --theme-dark-background: var(--color-dark-grey-background);
+    --theme-dark-color: white;
+    --theme-transparent-background: transparent;
+    --theme-transparent-color: white;
+
+    /* Layout */
+    --header-height: 17.5rem;
+    --header-height-sticky: 8rem;
+    --section-left-indentation: 10rem;
+
+    @media (--laptop-max) {
+        --header-height: 8rem;
+        --section-left-indentation: 0;
+    }
+
+    /* Font */
+    --font-weight-extra-light: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+}

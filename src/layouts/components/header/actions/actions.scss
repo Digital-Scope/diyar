@@ -1,0 +1,108 @@
+@import "../../../../sass/settings.scss";
+
+:root {
+    --border-width: 3px;
+    --item-spacing: 1.5rem;
+}
+
+.header-actions {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.header-action {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 0 var(--item-spacing);
+}
+
+.header-action:last-child {
+    padding-right: 0;
+}
+
+.header-action svg {
+    color: var(--color-grey);
+}
+
+.header-action:hover svg {
+    color: var(--color-text);
+}
+
+.header-action.search-toggle svg {
+    height: 2.5rem;
+    width: 3rem;
+}
+
+.header-action a,
+.header-action svg {
+    transition: color var(--transition-duration);
+}
+
+.navigation-toggle-hamburger {
+    height: 2.5rem;
+    width: 3rem;
+}
+
+.navigation-toggle-close {
+    position: absolute;
+
+    width: 2.3rem;
+}
+
+.navigation-toggle-close {
+    height: 100%;
+}
+
+@media (--desktop-min) {
+    .navigation-toggle {
+        width: 0;
+        padding: 0;
+        margin-left: calc(-1 * var(--item-spacing));
+        overflow: hidden;
+    }
+}
+
+/* Transitions */
+
+.navigation-toggle-hamburger {
+    transform: translateX(0);
+}
+
+.navigation-toggle-close {
+    opacity: 0;
+    transform: translateX(1.2rem);
+}
+
+.header-action .navigation-toggle-hamburger,
+.header-action .navigation-toggle-close {
+    transition:
+        color var(--transition-duration),
+        opacity var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+/* Open state */
+
+header.mobile-navigation-open .navigation-toggle-hamburger {
+    transform: translateX(1.2rem);
+    opacity: 0;
+}
+
+header.mobile-navigation-open .navigation-toggle-close.header-item {
+    transform: translateX(0);
+    opacity: 1;
+    color: var(--color-text);
+}
+
+header.search-open .search-toggle svg {
+    color: var(--color-text);
+}

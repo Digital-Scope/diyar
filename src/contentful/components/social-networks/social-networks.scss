@@ -1,0 +1,28 @@
+@import "../../../sass/settings.scss";
+
+.social-networks {
+    display: flex;
+}
+
+.social-networks-item {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 4rem;
+}
+
+.social-networks-item:last-child {
+    margin-right: 0;
+}
+
+.social-networks-item svg {
+    height: 100%;
+    width: 100%;
+}
+
+.social-networks.theme-light {
+    color: var(--color-text);
+}
+
+.social-networks.theme-dark {
+    color: white;
+}

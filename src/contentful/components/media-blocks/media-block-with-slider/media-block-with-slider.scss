@@ -1,0 +1,44 @@
+@import "../../../../sass/settings.scss";
+
+:root {
+    --text-column-spacing: 5rem;
+}
+
+.media-block-with-slider {
+    margin: 5rem 0;
+}
+
+.media-block-with-slider-subtitle {
+    width: calc(50% - var(--text-column-spacing));
+}
+
+.media-block-with-slider-text {
+    display: flex;
+}
+.media-block-with-slider-text-block {
+    flex-basis: 50%;
+}
+.media-block-with-slider-text-block:first-child {
+    margin-right: var(--text-column-spacing);
+}
+.media-block-with-slider-text-block:last-child {
+    margin-left: var(--text-column-spacing);
+}
+
+.media-block-with-slider-content-slider {
+    margin-left: var(--section-left-indentation);
+}
+
+@media (--phone-max) {
+    .media-block-with-slider-subtitle {
+        width: 100%;
+    }
+
+    .media-block-with-slider-text {
+        flex-direction: column;
+    }
+
+    .media-block-with-slider-text .media-block-with-slider-text-block {
+        margin: 0;
+    }
+}

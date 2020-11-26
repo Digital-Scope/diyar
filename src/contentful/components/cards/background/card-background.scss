@@ -1,0 +1,20 @@
+@import "../../../../sass/settings.scss";
+
+.card-background {
+    position: relative;
+}
+
+.card-background-square {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+
+    width: 9.1rem;
+    height: 9.1rem;
+
+    background-color: var(--color-main);
+}
+
+.card-background-square.secondary {
+    background-color: var(--color-grey);
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Content - Role Filter",
+  "description": "Role filter for careers page",
+  "displayField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "filterValue",
+      "name": "Filter Value",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "ue7ue4ps9aos"
+      }
+    },
+    "id": "contentRoleFilter",
+    "type": "ContentType",
+    "createdAt": "2018-08-20T07:55:37.360Z",
+    "updatedAt": "2018-08-20T07:55:38.093Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "publishedCounter": 1,
+    "version": 2,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "5nyGhlr7mSkf8iP8anW30Y"
+      }
+    },
+    "publishedVersion": 1,
+    "firstPublishedAt": "2018-08-20T07:55:38.093Z",
+    "publishedAt": "2018-08-20T07:55:38.093Z"
+  }
+}

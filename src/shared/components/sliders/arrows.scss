@@ -1,0 +1,78 @@
+@import "../../../sass/settings.scss";
+
+.slider-arrows {
+    display: inline-flex;
+    justify-content: center;
+
+    background-color: white;
+}
+
+.slider-arrow {
+    display: flex;
+    align-items: center;
+
+    height: 10rem;
+    width: 7.7rem;
+    transform: none;
+    margin: 0;
+    cursor: pointer;
+
+    padding-left: 1.5rem;
+    justify-content: flex-start;
+}
+
+[dir=rtl] .slider-arrow {
+    padding-left: 1.5rem;
+}
+
+/* rtl:ignore */
+.slider-arrow.slider-arrow-previous {
+    transform: rotate(180deg);
+}
+
+[dir=rtl] .slider-arrow.slider-arrow-next {
+    justify-content: flex-end;
+    transform: rotate(180deg);
+}
+
+[dir=rtl] .slider-arrow.slider-arrow-previous {
+    justify-content: flex-end;
+    transform: rotate(0);
+}
+
+
+.slider-arrow:hover {
+    opacity: 1;
+}
+
+/* rtl:ignore */
+.slider-arrow svg {
+    height: 1.0rem;
+    width: 2.7rem;
+    opacity: 0.6;
+    transform: scaleX(0.9);
+
+    color: var(--color-main);
+
+    transform-origin: left;
+    transition:
+        opacity var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+.slider-arrow:hover svg {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.slider-arrow.left::before {
+    left: auto;
+    right: 0;
+}
+
+@media (--desktop-max) {
+    .slider-arrow {
+        height: 5rem;
+        width: 8rem;
+    }
+}

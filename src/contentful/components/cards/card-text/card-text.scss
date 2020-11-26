@@ -1,0 +1,82 @@
+@import "../../../../sass/settings.scss";
+
+.card-text {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 5rem 4.6rem;
+
+    background-color: var(--color-white-text);
+    box-shadow: 0 0 3.2rem 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-main);
+
+    height: .6rem;
+    width: 100%;
+}
+
+.card-text-title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 3.8rem;
+    padding-left: 5rem;
+
+    font-weight: var(--font-weight-light);
+    font-size: 2.2rem;
+    color: var(--color-text);
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 2;
+}
+
+.card-text-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    border: 1px solid var(--color-text);
+    height: 0;
+    width: 3rem;
+
+    transform: scaleY(0.5);
+}
+
+.card-text-first-line {
+    margin-bottom: 2rem;
+
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 3rem;
+    color: var(--color-main);
+    line-height: 1.4;
+}
+.card-text-body {
+    font-weight: var(--font-weight-light);
+    font-size: 1.6rem;
+    color: var(--color-text);
+    letter-spacing: 0;
+    line-height: 2.25;
+}
+
+
+@media (--laptop-max) {
+    .card-text {
+        padding: 3rem 2.6rem;
+    }
+    .card-text-title {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+    .card-text-first-line {
+        font-size: 20px;
+    }
+    .card-text-body {
+        line-height: 1.7;
+    }
+}

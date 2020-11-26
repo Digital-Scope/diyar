@@ -1,0 +1,53 @@
+@import "../../../sass/settings.scss";
+
+.title-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: var(--section-left-indentation);
+}
+
+.title {
+    align-self: flex-start;
+    margin-left: 20px;
+
+    position: absolute;
+    left: -1rem;
+
+    display: inline-flex;
+    flex-direction: column;
+    font-weight: var(--font-weight-semi-bold);
+
+    transform-origin: left;
+    transform: translateY(-50%) rotate(-90deg) translateX(-100%);
+}
+
+.title-text {
+    color: var(--color-main);
+    font-size: 3rem;
+}
+
+@media (--laptop-max) {
+    .title-wrapper {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        position: static;
+        left: auto;
+        text-align: center;
+        transform: none;
+
+        margin-left: 0;
+        margin-bottom: 5rem;
+    }
+    .title.title-mb-0 {
+        margin-bottom: 0;
+    }
+    .title-text {
+        font-size: 25px;
+    }
+}

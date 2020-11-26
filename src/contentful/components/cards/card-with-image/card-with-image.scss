@@ -1,0 +1,131 @@
+@import "../../../../sass/_settings.scss";
+
+.card-with-image {
+    position: relative;
+
+    padding: 3.5rem 3rem;
+
+    background-color: var(--color-dark-grey-background);
+    color: var(--color-white-text);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0;
+}
+
+.card-with-image-top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+}
+
+.card-with-image-subtitle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 2.2rem;
+    line-height: 1.2;
+    padding-left: 5rem;
+}
+
+.card-with-image-subtitle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+
+    border: 1px solid var(--color-white-text);
+    height: 0;
+    width: 3rem;
+
+    transform: scaleY(0.5);
+}
+
+.card-with-image {
+    position: relative;
+}
+
+.card-with-image-thumbnail {
+    margin-left: 2rem;
+
+    transform: translateY(calc(100% + 0.5rem));
+}
+
+.card-with-image-thumbnail-button {
+    width: 12.6rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.card-with-image-zoom {
+    position: absolute;
+    left: -1rem;
+    bottom: calc(100% + 1.5rem);
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // opacity: ;
+    background-color: var(--color-main);
+    color: white;
+    box-shadow: 0 0 .2rem rgba(60, 60, 60, 0.2);
+
+    transition:
+        background-color calc(var(--transition-duration) * 3),
+        color calc(var(--transition-duration) * 3);
+}
+
+.card-with-image-thumbnail:hover .card-with-image-zoom {
+    background-color: white;
+    color: var(--color-main);
+    opacity: 1;
+}
+
+.card-with-image-zoom svg {
+    height: 2rem;
+    width: 1.6rem;
+}
+
+.card-with-image-thumbnail-image {
+    padding: .5rem;
+    border: .5rem solid white;
+
+    overflow: hidden;
+    background-color: white;
+
+    transform: translateY(-100%);
+}
+
+.card-with-image-title {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.card-with-image-text-body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+@media (--laptop-max) {
+    .card-with-image {
+        padding: 3.5rem 2rem;
+    }
+
+    .card-with-image-top {
+        justify-content: center;
+    }
+
+    .card-with-image-subtitle {
+        display: none;
+    }
+
+    .card-with-image-text {
+        text-align: center;
+    }
+
+    .card-with-image-title {
+        font-size: 20px;
+    }
+}

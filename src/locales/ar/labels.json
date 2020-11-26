@@ -1,0 +1,194 @@
+{
+    "pageTitles": {
+        "careers": "فرص العمل",
+        "contactUs": "تواصل معنا"
+    },
+    "latestArticles": {
+        "readMore": "المزيد",
+        "mainHeader": "آخر المقالات"
+    },
+    "subscriptionForm": {
+        "inputPlaceholder": "أدخل بريدك الإلكتروني"
+    },
+    "newsletterForm": {
+        "inputPlaceholder": "أدخل بريدك الإلكتروني",
+        "title": "سجّل لنشرتنا الإخبارية",
+        "submit": "سجّل",
+        "checkNews": "تفقّد النشرة الإخبارية",
+        "link": "/newsletter/index-ar.html",
+        "successMsg": "شكرًا! لقد تم التسجيل بنجاح.",
+        "errorMsg": "الرجاء إدخال بريد الكتروني صحيح"
+    },
+
+    "filter": {
+        "filterLabel": "فلتر",
+        "select": "بدون فلتر",
+        "noResult": "لا توجد نتائج"
+    },
+    "mediaCenter": {
+        "pageTitle": "المركز الإعلامي | ديار المحرق",
+        "pageDescription": "المركز الإعلامي لديار المحرق هو بوابة فريدة للصور ومقاطع الفيديو التي توضح الأخبار والتحديثات وفريق الإدارة وأكثر من ذلك بكثير.",
+        "title": "المركز الإعلامي",
+        "selections": {
+            "dates": [
+                {
+                    "value": "this month",
+                    "text": "الشهر الحالي"
+                },
+                {
+                    "value": "last month",
+                    "text": "الشهر الماضي"
+                },
+                {
+                    "value": "last 3 months",
+                    "text": "آخر ٣ أشهر"
+                },
+                {
+                    "value": "this year",
+                    "text": "العام الحالي"
+                },
+                {
+                    "value": "last year",
+                    "text": "العام الماضي"
+                }
+            ],
+            "departments": [
+                {
+                    "value": "residential",
+                    "text": "سكني"
+                },
+                {
+                    "value": "commercial",
+                    "text": "تجاري"
+                }
+            ],
+            "mediaType": [
+                {
+                    "value": "articles",
+                    "text": "مقالات"
+                },
+                {
+                    "value": "news",
+                    "text": "أخبار"
+                }
+            ]
+        },
+        "placeholders": {
+            "date": "ناريخ النشر",
+            "department": "القسم",
+            "mediaType": "النوع"
+        }
+    },
+    "loadMore": "المزيد",
+    "formValidation": {
+        "required": "هذا الحقل مطلوب",
+        "emailFormat": "البريد الإلكتروني غير صحيح",
+        "phoneFormat": "رقم الهاتف غير صحيح",
+        "fileSize": "يجب ان يكون حجم الملف أقل من ١٠ ميجابايت",
+        "fileType": "أنواع الملفات المسموح بها هي .doc أو .docx أو .pdf "
+    },
+    "careersListing": {
+        "applyButtonText": "تقدم بطلبك"
+    },
+    "formControls": {
+        "nextInputActionText": "استمرار",
+        "nextInputActionHelper": "اضغط Enter"
+    },
+    "careersForm": {
+        "title": "قدم الآن",
+        "subtitle": "من فضلك ادخل البيانات المطلوبة:",
+        "submitButtonText": "ارسل",
+        "fields": {
+            "name": {
+                "label": "الاسم",
+                "placeholder": ""
+            },
+            "email": {
+                "label": "البريد الإلكتروني",
+                "placeholder": "mail@site.com"
+            },
+            "phone": {
+                "label": "رقم الهاتف",
+                "placeholder": ""
+            },
+            "coverLetter": {
+                "label": "رسالة طلب عمل",
+                "placeholder": "الرسالة"
+            },
+            "cv": {
+                "label": "السيرة الذاتية",
+                "placeholder": "من فضلك قم برفع سيرتك الذاتية"
+            }
+        },
+        "formSuccess": "تم استلام البيانات بنجاح. شكرا لرغبتك في العمل في ديار المحرق.",
+        "formFailure": "تعذر الاتصال بالسيرفر. من فضلك حاول مجددا في وقت لاحق"
+    },
+    "contactUsData": {
+        "Fax": "فاكس",
+        "Tel": "تليفون"
+    },
+    "contactUsForm": {
+        "displayTitle": "",
+        "subtitle": "",
+        "fields": {
+            "firstName": {
+                "label": "الاسم الأول",
+                "placeholder": ""
+            },
+            "lastName": {
+                "label": "الاسم الأخير",
+                "placeholder": ""
+            },
+            "name": {
+                "label": "الاسم الأخير",
+                "placeholder": ""
+            },
+            "email": {
+                "label": "البريد الإلكتروني",
+                "placeholder": "mail@site.com"
+            },
+            "phone": {
+                "label": "رقم الهاتف",
+                "placeholder": ""
+            },
+            "countryCode": {
+                "label": "البلد",
+                "placeholder": ""
+            },
+            "inquiryType": {
+                "label": "أنا ابحث عن",
+                "placeholder": ""
+            },
+            "message": {
+                "label": "الرسالة",
+                "placeholder": ""
+            }
+        },
+        "submitButtonText": "إرسال",
+        "formSuccess": "تم استلام استفسارك. سوف نقوم بالاتصال بك في اقرب فرصة.",
+        "formFailure": "تعذر الاتصال بالسيرفر. من فضلك حاول مجددا في وقت لاحق."
+    },
+    "projectsList": {
+        "ctaText": "إكتشف أكثر"
+    },
+    "projectDetails": {
+        "takeATour": {
+            "title": "خذ جولة معنا"
+        }
+    },
+    "download-files": {
+        "download": "تحميل"
+    },
+    "search-results": {
+        "title": "نتائج البحث",
+        "heading": "نتائج {0}",
+        "searchResultCount": "عدد النتائج التي تم العثور عليها {0}",
+        "newsLink": "اقرأ الخبر",
+        "articleLink": "اقرأ المقالة",
+        "pageLink": "اذهب إالي الصفحة",
+        "jobPostLink": "اذهب إلي الوظيفة"
+    },
+    "landingPage": {
+        "cta": "سجل اهتمامك"
+    }
+}

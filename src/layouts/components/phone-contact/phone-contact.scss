@@ -1,0 +1,29 @@
+@import "../../../../src/sass/settings";
+
+.landing-page-layout-call-icon-popup .landing-page-layout-call-icon-popup-phone-container:not(:last-child) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+/* rtl:begin:ignore */
+.landing-page-layout-call-icon-phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__typography {
+    font-weight: bold;
+  }
+
+
+  &__direction {
+    direction: ltr;
+  }
+
+  &__rotate {
+    transform: rotateY(180deg);
+  }
+}
+/* rtl:end:ignore */
+

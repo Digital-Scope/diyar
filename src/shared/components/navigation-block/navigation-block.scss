@@ -1,0 +1,184 @@
+@import "../../../sass/settings.scss";
+
+.navigation-block {
+    position: relative;
+    display: flex;
+}
+
+.navigation-block-items {
+    flex: 1;
+}
+
+.navigation-block-markers-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+    opacity: 0;
+
+    transition: opacity var(--transition-duration);
+}
+.navigation-block-markers-wrapper.active {
+    opacity: 1;
+}
+
+.navigation-block-markers {
+    position: sticky;
+    top: calc(var(--header-height) / 2);
+    left: 0;
+    width: 10rem;
+    height: calc(100vh - var(--header-height) / 2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(-50%);
+}
+
+.navigation-block-marker {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--color-light-text);
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-semi-bold);
+
+    transition: color calc(var(--transition-duration) * 2);
+}
+
+.navigation-block-marker:hover {
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.navigation-block-marker.active {
+    color: var(--color-main);
+}
+
+.navigation-block-marker::after {
+    content: '';
+    width: 1px;
+    height: 0;
+    background-color: var(--color-light-text);
+
+    transition: height calc(var(--transition-duration) * 2);
+}
+
+.navigation-block-marker::after {
+    margin: .5rem 0;
+}
+
+.navigation-block-marker.active::after {
+    height: 10rem;
+}
+
+.navigation-block-marker:last-child::after {
+    height: 0;
+}
+
+.navigation-block-markers-mobile-bottom {
+    display: none;
+}
+
+@media (--laptop-max) {
+    .navigation-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation-block-markers-wrapper {
+        order: 1;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .navigation-block-markers {
+        position: static;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: 50%;
+        padding: 1rem 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(0);
+    }
+
+    .navigation-block-marker {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navigation-block-marker::after {
+        content: '';
+        height: 1px !important;
+        width: 0;
+
+        transition: width calc(var(--transition-duration) * 2);
+    }
+
+    .navigation-block-marker::after {
+        margin: 0 1rem;
+    }
+
+    .navigation-block-marker.active::after {
+        width: 5rem;
+    }
+
+    .navigation-block-marker:last-child::after {
+        width: 0;
+        margin: 0;
+    }
+
+    .navigation-block-markers-mobile-bottom {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .navigation-block-markers-wrapper {
+        background-color: transparent;
+
+        transition: background-color var(--transition-duration);
+    }
+    .navigation-block-markers-wrapper.active {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .navigation-block-markers-wrapper .navigation-block-markers {
+        opacity: 0;
+        transform: translateY(50%);
+
+        transition:
+            transform var(--transition-duration),
+            opacity var(--transition-duration);
+    }
+    .navigation-block-markers-wrapper.active .navigation-block-markers {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+}
+
+@media (--phone-max) {
+    .navigation-block-markers-mobile-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+}

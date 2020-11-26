@@ -1,0 +1,55 @@
+html,
+body {
+    position: relative;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+}
+
+html.no-scroll {
+    overflow-y: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#___gatsby {
+    height: 100%;
+}
+
+::selection {
+    background-color: rgba(238, 49, 35, 0.5);
+    color: white;
+}
+
+/* Reset */
+
+button {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+}

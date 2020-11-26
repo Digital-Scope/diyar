@@ -1,0 +1,136 @@
+@import "../../../../../sass/settings.scss";
+
+/* rtl:begin:ignore */
+@keyframes painting-hint {
+    0% {
+        transform: rotate(0);
+    }
+    30% {
+        transform: translateX(-4px) rotate(30deg);
+    }
+    60% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes painting-hint-mobile {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(.9);
+    }
+    60% {
+        transform: scale(1);
+    }
+}
+/* rtl:end:ignore */
+
+.painting-canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    cursor: url('./brush.png') 20 20, pointer;
+}
+
+.painting-canvas-image-wrapper {
+    position: absolute !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.painting-canvas canvas {
+    margin: auto;
+
+    background-color: transparent;
+    filter: grayscale(100%);
+    opacity: 0;
+
+    transition: opacity var(--transition-duration);
+    // position: relative;
+    // width: 100%;
+}
+
+.painting-canvas-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 8rem;
+    width: 8rem;
+
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    background: white;
+    box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 100%;
+
+    transform: translate(-50%, -50%) scale(0.5);
+
+    transition:
+        opacity var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+.painting-canvas-hint::before {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 50%;
+
+    background-image: url('./painting-hint.svg');
+    background-repeat: no-repeat;
+
+    transform-origin: bottom;
+
+    animation-name: painting-hint;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease;
+}
+
+[dir="rtl"] .painting-canvas-hint::before {
+    animation-name: painting-hint;
+}
+
+
+.painting-canvas.in .painting-canvas-hint {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.painting-canvas.in canvas {
+    opacity: 1;
+}
+
+.painting-canvas.painting-started .painting-canvas-hint {
+    opacity: 0;
+}
+
+.painting-canvas.device-is-touch .painting-canvas-hint::before {
+    transform-origin: center;
+    animation-name: painting-hint-mobile;
+}
+
+
+@media (--phone-max) {
+    .painting-canvas-hint {
+        height: 4rem;
+        width: 4rem;
+    }
+}

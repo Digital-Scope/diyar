@@ -1,0 +1,230 @@
+@import "../../sass/settings.scss";
+
+.landing-page-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    @media (--laptop-max) {
+        background-color: var(--color-light-grey-background);
+    }
+}
+
+.landing-page-layout header {
+    z-index: 2;
+}
+
+.landing-page-layout #components {
+    z-index: 1;
+}
+
+.landing-page-layout > #container >  #content-main {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Make the first component margin top the same */
+.landing-page-layout > header:not(.blend) + #content section:first-child {
+    margin-top: 5rem;
+
+    @media (--laptop-max) {
+        margin-top: 0;
+    }
+}
+
+.landing-page-layout > #container > #content-main > #content-main__first-column {
+    position: relative;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+
+    @media (--laptop-max) {
+        width: 100%;
+    }
+}
+
+.landing-page-layout #content-main__first-column:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+
+    background-color: var(--color-light-grey-background);
+
+    @media (--laptop-max) {
+        display: none;
+    }
+}
+
+.landing-page-layout > #container > #content-main > #content-main__first-column > #components {
+    flex-grow: 1;
+}
+
+.landing-page-layout > #container > #content-main > #content-main__second-column {
+    width: 43%;
+    padding-top: var(--header-height);
+    padding-bottom: 4rem;
+    padding-left: 8rem;
+
+    overflow: scroll;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+
+    @media (--laptop-max) {
+        display: none;
+    }
+
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
+/* Removing form scrollbar on Mozilla */
+@-moz-document url-prefix() {
+    .landing-page-layout > #container > #content-main > #content-main__second-column {
+        scrollbar-width: none
+    }
+}
+
+.landing-page-layout-call-icon {
+    position: absolute;
+    right: 0;
+    top: calc(var(--header-height) / 2);
+
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.landing-page-layout-call-icon svg {
+    height: 46px;
+    width: 46px;
+}
+
+.landing-page-layout-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 999;
+}
+
+.landing-page-layout-overlay-content {
+    color: black;
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 50%;
+    margin: auto;
+    border: .1rem solid rgb(187, 187, 187);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.landing-page-layout-overlay-content__hide {
+    display: none;
+}
+
+.landing-page-layout-call-icon-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+/* rtl:begin:ignore */
+.landing-page-layout-call-icon-popup {
+    direction: ltr;
+}
+/* rtl:end:ignore */
+
+.landing-page-layout-call-icon-popup svg {
+    height: 26px;
+    width: 26px;
+}
+
+@keyframes slide-in-phone-mobile {
+    from {
+        transform: translateY(-75%) rotateZ(-90deg) translateY(120%);
+    }
+    to {
+        transform: translateY(-75%) rotateZ(-90deg);
+    }
+}
+
+.landing-page-layout-call-icon-mobile {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 35%;
+    right: 3px;
+
+    transform: translateY(-75%) rotateZ(-90deg) translateY(120%);
+
+    animation-name: slide-in-phone-mobile;
+    animation-timing-function: ease;
+    animation-duration: calc(var(--transition-duration) * 3);
+    animation-delay: calc(var(--transition-duration) * 3);
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+
+    svg {
+        height: 36px;
+        width: 36px;
+    }
+
+    @media (--desktop-min) {
+        display: none;
+    }
+
+    &__rotate {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(50%) rotate(90deg) translate(50%, -50%);
+    }
+    to {
+        transform: translateX(50%) rotate(90deg) translate(50%, 50%);
+    }
+}
+
+.landing-page-layout .landing-page-layout-mobile-cta {
+    z-index: 2;
+    position: fixed;
+    top: 35%;
+    right: 0;
+
+    transform-origin: center;
+    transform: translateX(50%) rotate(90deg) translate(50%, -50%);
+
+    animation-name: slide-in;
+    animation-timing-function: ease;
+    animation-duration: calc(var(--transition-duration) * 3);
+    animation-delay: calc(var(--transition-duration) * 2);
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+
+    @media (--desktop-min) {
+        display: none;
+    }
+}
+
+// Reduce height of "Register your interest" form.
+.form-field-group {
+  margin-bottom: 1.5rem;
+}
+
+.text-block h1 {
+    margin-bottom: 0;
+}

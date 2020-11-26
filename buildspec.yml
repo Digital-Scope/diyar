@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+      - chmod u+x ./site-deployer
+      - cd public
+      - aws s3 rm  s3://$SITE_BUCKET/ --recursive --exclude "CRM/*"
+      - ../site-deployer . $SITE_BUCKET
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+artifacts:
+  type: zip
+  files:
+    - public/**/*
+  name: build-$(date +%Y-%m-%d-%H-%M).zip

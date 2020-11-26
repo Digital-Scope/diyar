@@ -1,0 +1,28 @@
+@import "../../../sass/settings.scss";
+
+.two-text-column {
+    background-color: var(--color-light-grey-background);
+    padding: 4.5rem 0;
+
+    &-text-container {
+        display: flex;
+        font-size: 1.6rem;
+        font-weight: var(--font-weight-light);
+        line-height: 2.25;
+        color: var(--color-text);
+
+        @media (--laptop-max) {
+            flex-direction: column;
+            line-height: 2.5rem;
+        }
+    }
+
+    &-first {
+        padding-right: 11rem;
+
+        @media (--laptop-max) {
+            padding-right: 0;
+            padding-bottom: 2.5rem;
+        }
+    }
+}

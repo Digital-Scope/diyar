@@ -1,0 +1,65 @@
+@import "../../../sass/settings.scss";
+
+.filter-section {
+    &-container {
+        background-color: var(--color-light-grey-background);
+        padding: 0 3.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-bottom: 5.5rem;
+
+        @media (--tablet-max) {
+            flex-direction: column;
+            padding: 0;
+            align-items: flex-start;
+        }
+
+        @media (--phone-max) {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+        }
+    }
+
+    &-header {
+        color: var(--color-text);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        min-width: 12rem;
+        align-self: center;
+        margin-bottom: 0;
+
+        @media (--tablet-max) {
+            width: 100%;
+            background-color: #eaebf1;
+            text-align: center;
+            padding: 1.5rem 0;
+            text-transform: capitalize;
+        }
+
+        &-mobile-only {
+            display: none;
+
+            @media (--tablet-max) {
+                display: block;
+            }
+        }
+    }
+
+    &-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+
+        @media (--tablet-max) {
+            flex-direction: column;
+            text-align: left;
+        }
+    }
+
+
+}

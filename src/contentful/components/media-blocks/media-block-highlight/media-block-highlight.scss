@@ -1,0 +1,101 @@
+@import "../../../../sass/settings.scss";
+
+.highlight {
+    &-wrapper {
+        margin-top: 18rem;
+        margin-bottom: 10rem;
+
+        background: linear-gradient(to right, var(--color-white-text), var(--color-white-text) 50%, var(--color-light-grey-background) 50%, var(--color-light-grey-background) 100%);
+        @media (--laptop-max) {
+            background: var(--color-light-grey-background);
+            margin-top: 20rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &-container {
+        display: flex;
+        background: linear-gradient(to left, var(--color-light-grey-background) 75%, var(--color-white-text) 50%);
+        padding: 5rem 5rem 5rem 0;
+
+        @media (--laptop-max) {
+            flex-direction: column;
+            background: var(--color-light-grey-background);
+            padding: 0 0 5rem 0;
+        }
+    }
+
+    &-image {
+        width: 55rem;
+
+        @media (--laptop-max) {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-outer-wrapper {
+            width: 50%;
+            position: relative;
+            padding-right: 6rem;
+
+            @media (--laptop-max) {
+                width: 100%;
+                padding-right: 0;
+                transform: translateY(-50%);
+                height: 30rem;
+            }
+        }
+
+        &-wrapper {
+            transform: translateY(-11rem);
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            @media (--laptop-max) {
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &-body {
+        font-size: 1.6rem;
+        font-weight: var(--font-weight-light);
+        line-height: 2.25;
+        color: var(--color-text);
+
+        h2 {
+            margin: 3rem 0 2rem;
+        }
+    }
+
+    &-text-container {
+        width: 50%;
+
+        @media (--laptop-max) {
+            width: 100%;
+            margin-top: -12rem;
+        }
+    }
+}
+
+
+/* No Image */
+
+.highlight-wrapper.no-image {
+    background: var(--color-light-grey-background);
+    margin-top: 8rem;
+}
+
+.highlight-wrapper.no-image .highlight-container {
+    background: var(--color-light-grey-background);
+    padding-top: 5rem;
+}
+
+.highlight-wrapper.no-image .highlight-text-container {
+    width: 100%;
+    margin-top: 0;
+}

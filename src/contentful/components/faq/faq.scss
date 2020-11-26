@@ -1,0 +1,139 @@
+@import "../../../sass/settings.scss";
+
+.faq {
+    &-wrapper {
+        background: var(--color-light-grey-background);
+        padding: 7.2rem 0 9rem;
+
+        @media (--laptop-max) {
+            padding: 5rem 0;
+        }
+    }
+
+    &-trigger {
+        display: block;
+
+        cursor: pointer;
+    }
+
+    &-topic {
+        padding: 2rem 5rem 2rem 0;
+
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.43;
+        letter-spacing: 0.5px;
+        color: var(--color-dark-text);
+
+        display: block;
+        border-bottom: 1px solid #4f4f4f;
+        position: relative;
+
+        &-closed::before {
+            content: "+";
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        &-opened {
+            &-inner {
+                padding-bottom: 2.2rem;
+            }
+
+            &::before {
+                content: "−";
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+            }
+        }
+
+        @media (--laptop-max) {
+            font-size: 2.2rem;
+        }
+
+        @media (--tablet-max) {
+            padding: 2rem 4rem 2rem 0;
+        }
+    }
+
+    &-item {
+        font-size: 1.8rem;
+        @media (--laptop-max) {
+            font-size: 1.7rem;
+        }
+        line-height: normal;
+        letter-spacing: 0.3px;
+        color: #6f7280;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #d5d6da;
+            padding-bottom: 1.5rem;
+
+            &:before {
+                top: calc(50% - 8px);
+            }
+        }
+
+        &-text {
+            padding-left: 3rem;
+
+            &-opened {
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 0.6rem solid transparent;
+                    border-right: 0.6rem solid transparent;
+                    border-bottom: 0.6rem solid var(--color-dark-text);
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+
+            &-closed {
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 0.6rem solid var(--color-dark-text);
+                    border-left: 0.6rem solid transparent;
+                    border-right: 0.6rem solid transparent;
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &-closed, &-opened {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &-answer {
+            p, li {
+                line-height: normal;
+            }
+            padding: 2rem 14.4rem 2rem 2.8rem;
+            font-size: 1.6rem;
+            font-weight: normal;
+            letter-spacing: 0.2px;
+            color: #4f4f4f;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            background: #FFF;
+
+            @media (--laptop-max) {
+                padding: 1.8rem;
+            }
+        }
+    }
+}

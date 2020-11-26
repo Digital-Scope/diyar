@@ -1,0 +1,66 @@
+@import "../../../../sass/settings.scss";
+
+:root {
+    --icon-size: 2.5rem;
+    --icon-padding: 1.5rem;
+}
+
+.search-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    background: rgba(247, 247, 247, 0.95);
+
+    transform: translateY(calc(-1 * var(--header-height)));
+}
+
+.search-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+}
+
+.search-bar form {
+    width: calc(100% - var(--icon-size) - var(--icon-padding) * 2);
+}
+
+.search-bar input {
+    width: 100%;
+    color: var(--color-text);
+    font-weight: var(--font-weight-light);
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.search-bar input::placeholder {
+    color: var(--color-light-text);
+    text-transform: capitalize;
+}
+
+.search-bar-close {
+    height: 100%;
+    padding: 0 var(--icon-padding);
+    margin-right: calc(-1 * var(--icon-padding));
+    cursor: pointer;
+}
+
+.search-bar-close svg {
+    color: var(--color-grey);
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    transition: color var(--transition-duration);
+}
+
+.search-bar-close:hover svg {
+    color: var(--color-text);
+}
+
+/* Align with header when it's on blend state */
+header.blend .search-bar-close {
+    margin-right: 0;
+}

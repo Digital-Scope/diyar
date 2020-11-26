@@ -1,0 +1,47 @@
+@import "../../../../sass/settings.scss";
+
+.latest-article-item {
+    display: flex;
+    margin-top: 5.2rem;
+    margin-bottom: 10rem;
+
+    @media (--tablet-max){
+        display: block;
+        margin-bottom: 4rem;
+    }
+
+    &-image {
+        min-width: 45%;
+        margin-right: 12rem;
+
+        @media (--tablet-max) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &-date {
+        color: var(--color-dark-grey-background);
+        font-size: 1.6rem;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-main);
+    }
+
+    &-header {
+        font-size: 1.6rem;
+        line-height: 2;
+        margin-top: 1.6rem;
+        margin-bottom: 2.5rem;
+
+        @media (--tablet-max) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &-excerpt {
+        color: var(--color-dark-grey-background);
+        line-height: 3.6rem;
+        font-size: 1.6rem;
+    }
+}

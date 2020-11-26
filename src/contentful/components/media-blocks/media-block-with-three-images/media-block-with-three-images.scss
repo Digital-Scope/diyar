@@ -1,0 +1,61 @@
+@import "../../../../sass/settings.scss";
+
+.media-block-with-three-images {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    background-color: #F5F6F9;
+}
+
+.media-block-with-three-images-content {
+    display: flex;
+}
+
+.media-block-with-three-images-content-images {
+    flex-basis: 50%;
+    display: flex;
+    margin-right: 11rem;
+}
+
+.media-block-with-three-images-content-image {
+    width: 17rem;
+    height: 21rem;
+    margin-right: 3rem;
+}
+
+.media-block-with-three-images-content-image:last-child {
+    margin-right: 0;
+}
+
+.media-block-with-three-images-text-title {
+    font-size: 3rem;
+    font-weight: var(--font-weight-light);
+    color: var(--color-dark-text);
+
+    margin-bottom: 1rem;
+}
+
+@media (--laptop-max) {
+    .media-block-with-three-images {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .media-block-with-three-images-content-images {
+        flex-basis: 100%;
+        min-height: 12rem;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .media-block-with-three-images-content-image {
+        flex-basis: 33%;
+        width: auto;
+        height: auto;
+        margin-right: 2rem;
+    }
+
+    .media-block-with-three-images-text {
+        display: none;
+    }
+}

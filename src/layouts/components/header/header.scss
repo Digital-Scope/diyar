@@ -1,0 +1,285 @@
+@import "../../../sass/settings.scss";
+
+:root {
+    --border-width: 3px;
+}
+
+header.header-wrapper {
+    height: var(--header-height);
+}
+
+.header {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    transition:
+        transform var(--transition-duration),
+        background-color var(--transition-duration);
+}
+
+.header-content {
+    height: var(--header-height);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.header-image {
+    --padding: 3rem;
+
+    height: calc(100% - 3rem * 2);
+    transform: scale(1) translateY(var(--padding));
+
+    transition: transform var(--transition-duration);
+    transform-origin: top;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    height: var(--header-height);
+    opacity: 1;
+
+    background-color: var(--theme-light-background);
+
+    transform-origin: top;
+    transition:
+        box-shadow var(--transition-duration),
+        background-color var(--transition-duration),
+        opacity var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+.header-image img {
+    height: 100%;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    height: 50%;
+    border-bottom: transparent var(--border-width) solid;
+
+    transition:
+        background-color var(--transition-duration),
+        border-bottom var(--transition-duration);
+}
+
+.header-item {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    color: var(--theme-light-color);
+
+    transition: color var(--transition-duration);
+}
+
+/*
+    Blend
+ */
+
+
+@keyframes blend-in {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes blend-sticky-out {
+    0% {
+        position: fixed;
+        transform: translateY(0);
+    }
+    99% {
+        position: fixed;
+        transform: translateY(-100%);
+    }
+    100% { position: absolute; }
+}
+@keyframes blend-search-open {
+    from { transform: translateY(0); }
+    to { transform: translateY(var(--header-height-sticky)); }
+}
+@keyframes blend-search-close {
+    from { transform: translateY(var(--header-height-sticky)); }
+    to { transform: translateY(0); }
+}
+@keyframes blend-search-close-sticky-out {
+    0% {
+        position: fixed;
+        transform: translateY(var(--header-height-sticky));
+    }
+    99% {
+        position: fixed;
+        transform: translateY(calc(-1 * 100% - var(--header-height-sticky)));
+    }
+    100% { position: absolute; }
+}
+
+.header-wrapper.blend {
+    margin-bottom: calc(-1 * var(--header-height));
+}
+
+.header-wrapper.blend .header {
+    position: absolute;
+    top: 0;
+    animation-name: blend-in;
+    animation-duration: var(--transition-duration);
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+    transition:
+        background-color var(--transition-duration);
+}
+
+.header-wrapper.blend .header::before {
+    opacity: 0;
+}
+
+.header-wrapper.blend .header-menu {
+    background-color: rgba(216, 216, 216, 0.12);
+    border-bottom-color: white;
+    padding: 0 1.5rem;
+}
+
+.header-wrapper.blend .header-item {
+    color: var(--theme-dark-color);
+}
+
+
+/* Sticky */
+
+.header-wrapper.blend.previous-sticky .header {
+    animation-name: blend-sticky-out;
+}
+
+.header-wrapper.blend.sticky .header {
+    position: fixed;
+    animation-name: blend-in;
+}
+
+.header-wrapper.sticky .header::before {
+    transform: scaleY(0.5);
+    opacity: 1;
+    box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.25);
+}
+
+.header-wrapper.sticky .header-image {
+    --padding: 2rem;
+
+    transform: scale(0.6) translateY(var(--padding));
+}
+
+.header-wrapper.sticky .header-menu {
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.header-wrapper.sticky .header-item {
+    color: var(--theme-light-color);
+}
+
+/* Mobile Navigation */
+
+.header-wrapper.mobile-navigation-open .header::before {
+    opacity: 1;
+    background-color: var(--theme-light-background);
+}
+
+.header-wrapper.mobile-navigation-open .header-item {
+    color: var(--theme-light-color);
+}
+
+/* Search */
+
+.header-wrapper:not(.blend).search-open .header {
+    transform: translateY(var(--header-height-sticky));
+}
+
+.header-wrapper.search-open .header::before {
+    opacity: 1;
+    background-color: var(--theme-light-background);
+    box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.25);
+}
+
+.header-wrapper.search-open .header-menu {
+    border-bottom-color: transparent;
+}
+
+.header-wrapper.search-open .header-item {
+    color: var(--theme-light-color);
+}
+
+.header-wrapper.blend.search-open .header {
+    animation-name: blend-search-open;
+    animation-direction: normal;
+}
+
+.header-wrapper.blend.previous-search-open .header {
+    animation-name: blend-search-close;
+}
+
+.header-wrapper.blend.sticky.previous-search-open .header {
+    animation-name: blend-search-close;
+}
+
+.header-wrapper.blend.previous-sticky.previous-search-open .header {
+    animation-name: blend-search-close-sticky-out;
+}
+
+
+/*
+    Fix for fake header height.
+    The header background height animation does not change the height of the header,
+    so when the header is sticky, the elements behind it are not clickable.
+    To go around this, we disable the pointer events for the whole header,
+    and enable the pointer events again for the child elements that are
+    interactable.
+*/
+
+.header {
+    pointer-events: none;
+}
+
+.header > .container > * {
+    pointer-events: auto;
+}
+
+.header > .container > .header-content {
+    pointer-events: none;
+}
+
+.header > .container > .header-content > * {
+    pointer-events: auto;
+}
+
+
+@media (--laptop-max) {
+    .header-image {
+        --padding: 1rem;
+        height: calc(100% - 1rem * 2);
+    }
+
+    .header-menu {
+        height: 100%;
+    }
+
+    .header-wrapper.sticky .header-image {
+        transform: scale(1) translateY(calc(var(--padding) / 2));
+    }
+    .header-wrapper.sticky .header::before {
+        transform: scaleY(1);
+    }
+
+    .header.header .header-menu { /* repeated .header for greater specificity */
+        background-color: transparent;
+        border-bottom-color: transparent;
+    }
+}

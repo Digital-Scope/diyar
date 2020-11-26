@@ -1,0 +1,120 @@
+@import "../../../sass/settings.scss";
+
+.filter-dropdown {
+    &-container {
+        min-width: 19rem;
+        padding: 3.5rem;
+        position: relative;
+
+        @media (--tablet-max) {
+            padding: 0 3.5rem 6rem 3.5rem;
+
+            &:first-child {
+                padding-top: 2.5rem;
+            }
+        }
+
+        &-isOpen {
+            @media(--laptop-min) {
+                background-color: #eff0f5;
+            }
+
+            ul {
+                max-height: 400px;
+                overflow: auto;
+            }
+
+            & .filter-dropdown-selected-arrow {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    &-selected {
+        border-bottom: 1px solid var(--color-grey);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &-text {
+            padding-bottom: .5rem;
+            padding-left: 1rem;
+            font-size: 1.5rem;
+            color: #acaeb8;
+            text-transform: capitalize;
+
+            @media (--laptop-min) {
+                padding-left: 0;
+            }
+        }
+
+        &-value {
+            color: var(--color-dark-text)
+        }
+
+        &-arrow {
+            height: 1.8rem;
+            width: 1.8rem;
+            display: inline-block;
+            transition: all 0.3s ease-out;
+
+            @media (--laptop-min) {
+                height: 1.2rem;
+                width: 1.2rem;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-mobile-label {
+        display: block;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+
+        @media (--laptop-min) {
+            display: none;
+        }
+    }
+
+    &-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-out;
+        background-color: #eff0f5;
+        box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.25);
+        position: static;
+        left: 0;
+        width: 100%;
+
+        @media (--laptop-min) {
+            position: absolute;
+            z-index: 10;
+        }
+
+        &-item {
+            padding: 2rem;
+            font-size: 1.6rem;
+            font-weight: var(--font-weight-light);
+            color: #4d4d4d;
+            cursor: pointer;
+
+            &-selected {
+                color: var(--color-main);
+            }
+
+            &-none {
+                color: lighten(#4d4d4d, 10% )
+            }
+
+            &:hover {
+                background-color: darken(#eff0f5, 10%);
+            }
+        }
+    }
+}

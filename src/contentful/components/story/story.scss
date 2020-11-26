@@ -1,0 +1,35 @@
+@import "../../../sass/settings.scss";
+
+.story {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.story-cta {
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 35%;
+    right: 0;
+
+    transform-origin: right;
+    transform: translateY(-50%) rotate(-90deg) translate(50%, 50%);
+
+    transition:
+        opacity var(--transition-duration),
+        visibility var(--transition-duration),
+        transform var(--transition-duration);
+}
+
+.story-cta.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) rotate(-90deg) translate(50%, -50%);
+}
+
+@media (--laptop-max) {
+    .story-cta {
+        display: none;
+    }
+}

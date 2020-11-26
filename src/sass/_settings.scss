@@ -1,0 +1,19 @@
+/* Custom media queries */
+@custom-media --phone-max (width < 576px);
+@custom-media --tablet-max (width <= 768px);
+@custom-media --laptop-max (width < 992px);
+@custom-media --desktop-max (width < 1200px);
+
+@custom-media --phone-min (width >= 0px);
+@custom-media --tablet-min (width >= 576px);
+@custom-media --laptop-min (width >= 768px);
+@custom-media --desktop-min (width >= 992px);
+
+@custom-media --phone-only (width < 576px);
+@custom-media --tablet-only (576px <= width < 768px);
+@custom-media --laptop-only (768px <= width < 992px);
+@custom-media --desktop-only (992px <= width < 1200px);
+@custom-media --large-phone-height (800px <= height <= 1024px);
+@custom-media --medium-phone-height (670px <= height < 800px);
+
+@custom-media --content-min (width >= 1440px);
