@@ -74,12 +74,9 @@ export default class PopUp extends Component {
                   {content.map(value => (
                     <div className="row height-inherit">
                       <div className={classnames('col-lg-8', 'col-md-12', 'height-inherit', { 'col-lg-last': !isArabic })}>
-                        <Img
-                          sizes={value.image}
-                          outerWrapperClassName="popup__image-wrapper"
-                          className="popup__image"
-                          imgStyle={{ width: 'inherit' }}
-                        />
+                        <div class="popup__image-wrapper">
+                          <img src="{value.image_src}" alt="{value.title}" class="popup__image"/>
+                        </div>
                       </div>
                       <div className={classnames('col-lg-4', 'col-md-12', 'align-self-center', { 'order-lg-first': !isArabic })}>
 
