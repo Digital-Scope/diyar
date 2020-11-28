@@ -38,12 +38,12 @@ export default class PopUp extends Component {
     if (locale === 'ar') {
       content = require('./ar.json').content.map((value, index) => ({
         ...value,
-        image: images[index].sizes,
+        //image: images[index].sizes,
       })).reverse();
     } else {
       content = require('./en.json').content.map((value, index) => ({
         ...value,
-        image: images[index].sizes,
+        //image: images[index].sizes,
       }));
     }
     return (
