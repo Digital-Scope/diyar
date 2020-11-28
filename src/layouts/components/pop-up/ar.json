@@ -2,25 +2,39 @@
   "locale": "ar",
   "content": [
     {
-      "title": "فلل النسيم",
-      "sub_title": "تملك حر + رسوم خدمة مجانية لمدة 3 سنوات",
-      "button_text": "سجل اهتمامك",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/ANV-AR",
-      "image_src": "/popup/image-1.png"
+      "title": "البارح",
+      "sub_title": "فرصة استثمارية لا مثيل لها في قطع أراضي البارح",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/AlBareh/?lang=ar",
+      "image_src": "/popup/04-Albareh-slider.jpg"
     },
     {
-      "title": "فلل البارح",
-      "sub_title": "تملك حر + 30% دفعة مقدمة / 70% دفعة\nعند إكتمال المشروع\n",
-      "button_text": "سجل اهتمامك",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/ABV-AR",
-      "image_src": "/popup/image-1.png"
+      "title": "العرض الخاص لفلل النسيم",
+      "sub_title": "رسوم خدمة مجانية لمدة 3 سنوات",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/AlNaseem/?lang=ar",
+      "image_src": "/popup/05-Alnaseem-slider.jpg"
     },
     {
-      "title": "قسائم البارح",
-      "sub_title": "تملك حر + فرصة استثمارية لا مثيل لها ",
-      "button_text": "سجل اهتمامك",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/ABP-AR",
-      "image_src": "/popup/image-1.png"
+      "title": "قسائم صالات العرض التجارية",
+      "sub_title": "بدون رسوم تسجيل + تملك حر",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/CommercialShowroomPlots/?lang=ar",
+      "image_src": "/popup/01-Showroom-plots-slider.jpg"
+    },
+    {
+      "title": "قسائم الفلل التجارية",
+      "sub_title": "أفضل الواقع للمشاريع الجديدة والراغبة في توسع أعمالها",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/CommercialVillaPlots/?lang=ar",
+      "image_src": "/popup/02-Commercial-villa-plots-slider.jpg"
+    },
+    {
+      "title": "قسائم المستودعات",
+      "sub_title": "بدون رسوم تسجيل + تملك حر",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/CommercialWarehousingPlots/?lang=ar",
+      "image_src": "/popup/03-Warehousing-plots-slider.jpg"
     }
   ]
 }

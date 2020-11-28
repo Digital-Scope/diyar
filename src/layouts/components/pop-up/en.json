@@ -2,25 +2,39 @@
   "locale": "en",
   "content": [
     {
-      "title": "Al Naseem Villas",
-      "sub_title": "Freehold + 3 Years Free Services Charge",
-      "button_text": "Register your interest",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/EN-ANV",
-      "image_src": "/popup/image-1.png"
+      "title": "Al Bareh",
+      "sub_title": "Unparalleled Investment Opportunity for Al Bareh Plots",
+      "button_text": "REGISTER YOUR INTEREST ",
+      "url": "https://www.diyar.bh/lp/AlBareh/",
+      "image_src": "/popup/04-Albareh-slider.jpg"
     },
     {
-      "title": "Al Bareh Villas",
-      "sub_title": "Freehold + 30% Down Payment / 70% Upon Completion",
-      "button_text": "Register your interest",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/EN-ABV",
-      "image_src": "/popup/image-1.png"
+      "title": "Special Offer for Al Nasseem Villas",
+      "sub_title": "3 Years Free Service Charge",
+      "button_text": "Register Now",
+      "url": "https://www.diyar.bh/lp/AlNaseem/",
+      "image_src": "/popup/05-Alnaseem-slider.jpg"
     },
     {
-      "title": "Al Bareh Plots",
-      "sub_title": "Freehold + Unparalleled Investment Opportunity",
-      "button_text": "Register your interest",
-      "url": "https://analytics-eu.clickdimensions.com/cn/aorwz/EN-ABP",
-      "image_src": "/popup/image-1.png"
+      "title": "Showroom Plots",
+      "sub_title": "Zero Registration Fee + Freehold Ownership",
+      "button_text": "REGISTER YOUR INTEREST ",
+      "url": "https://www.diyar.bh/lp/CommercialShowroomPlots/",
+      "image_src": "/popup/01-Showroom-plots-slider.jpg"
+    },
+    {
+      "title": "Commercial Villa Plots",
+      "sub_title": "The Best Location for Business Set-up And Expansion",
+      "button_text": "REGISTER YOUR INTEREST ",
+      "url": "https://www.diyar.bh/lp/CommercialVillaPlots/",
+      "image_src": "/popup/02-Commercial-villa-plots-slider.jpg"
+    },
+    {
+      "title": "Warehousing Plots",
+      "sub_title": "Zero Registration Fee + Freehold Ownership",
+      "button_text": "REGISTER YOUR INTEREST ",
+      "url": "https://www.diyar.bh/lp/CommercialWarehousingPlots/",
+      "image_src": "/popup/03-Warehousing-plots-slider.jpg"
     }
   ]
 }
