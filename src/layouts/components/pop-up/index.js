@@ -12,7 +12,7 @@ export default class PopUp extends Component {
   constructor(props) {
     super(props);
     this.StartDate = new Date('16 April 2020');
-    this.EndDate = new Date('1 June 2020');
+    this.EndDate = new Date('31 December 2020');
     this.state = {
       isVisible: false,
     };
