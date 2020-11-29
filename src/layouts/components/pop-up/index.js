@@ -11,7 +11,7 @@ import Cta from '../../../contentful/components/cta/index';
 export default class PopUp extends Component {
   constructor(props) {
     super(props);
-    this.StartDate = new Date('16 April 2020');
+    this.StartDate = new Date('16 April 2019');
     this.EndDate = new Date('31 December 2019');
     this.state = {
       isVisible: false,
