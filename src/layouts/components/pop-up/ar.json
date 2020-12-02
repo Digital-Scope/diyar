@@ -2,18 +2,18 @@
   "locale": "ar",
   "content": [
     {
-      "title": "البارح",
-      "sub_title": "فرصة استثمارية لا مثيل لها في قطع أراضي البارح",
-      "button_text": "سجل الآن",
-      "url": "https://www.diyar.bh/lp/AlBareh/?lang=ar",
-      "image_src": "/popup/Al-Bareh.jpg"
-    },
-    {
       "title": "العرض الخاص لفلل النسيم",
       "sub_title": "رسوم خدمة مجانية لمدة 3 سنوات",
       "button_text": "سجل الآن",
       "url": "https://www.diyar.bh/lp/AlNaseem/?lang=ar",
       "image_src": "/popup/al-naseem.jpg"
+    },
+    {
+      "title": "أراضي البارح",
+      "sub_title": "فرصة استثمارية لا مثيل لها في قطع أراضي البارح",
+      "button_text": "سجل الآن",
+      "url": "https://www.diyar.bh/lp/AlBareh/?lang=ar",
+      "image_src": "/popup/Al-Bareh.jpg"
     },
     {
       "title": "قسائم صالات العرض التجارية",

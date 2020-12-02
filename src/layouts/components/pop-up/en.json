@@ -2,18 +2,18 @@
   "locale": "en",
   "content": [
     {
+      "title": "Special Offer for Al Naseem Villas",
+      "sub_title": "3 Years Free Service Charge",
+      "button_text": "Register Now",
+      "url": "https://www.diyar.bh/lp/AlNaseem/",
+      "image_src": "/popup/al-naseem.jpg"
+    },
+    {
       "title": "Al Bareh Plots",
       "sub_title": "Unparalleled Investment Opportunity for Al Bareh Plots",
       "button_text": "REGISTER YOUR INTEREST ",
       "url": "https://www.diyar.bh/lp/AlBareh/",
       "image_src": "/popup/Al-Bareh.jpg"
-    },
-    {
-      "title": "Special Offer for Al Nasseem Villas",
-      "sub_title": "3 Years Free Service Charge",
-      "button_text": "Register Now",
-      "url": "https://www.diyar.bh/lp/AlNaseem/",
-      "image_src": "/popup/al-naseem.jpg"
     },
     {
       "title": "Showroom Plots",
