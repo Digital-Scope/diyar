@@ -24,10 +24,10 @@ module.exports = [
     typename: 'ContentfulComponentVideo',
     path: 'video/index.js',
   },
-  {
+  /*{
     typename: 'ContentfulComponentTimeline',
     path: 'timeline/index.js',
-  },
+  },*/
   {
     typename: 'ContentfulComponentTwoTextColumn',
     path: 'two-text-column/index.js',

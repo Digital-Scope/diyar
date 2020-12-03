@@ -36,7 +36,7 @@ export const pageFragment = graphql`
             __typename,
             ...ContentfulComponentHomepageHeroFragment
             ...ContentfulComponentStoryFragment
-            ...ContentfulComponentTimelineFragment
+            # ...ContentfulComponentTimelineFragment
             ...ContentfulComponentRichTextFragment
             ...ContentfulComponentFaq
             # ...ContentfulComponentVideoFragment
