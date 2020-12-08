@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Broadcast Matter';
+    src: url('BroadcastMatter.woff2') format('woff2'),
+        url('BroadcastMatter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('GillSansMT-BoldItalic.woff2') format('woff2'),
+        url('GillSansMT-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('GillSansMT-Italic.woff2') format('woff2'),
+        url('GillSansMT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT Condensed';
+    src: url('GillSansMT-Condensed.woff2') format('woff2'),
+        url('GillSansMT-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shekari Font';
+    src: url('BShekari.woff2') format('woff2'),
+        url('BShekari.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('GillSansMT-Bold.woff2') format('woff2'),
+        url('GillSansMT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT Ext Condensed';
+    src: url('GillSansMT-ExtraCondensedBold.woff2') format('woff2'),
+        url('GillSansMT-ExtraCondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('GillSansMT.woff2') format('woff2'),
+        url('GillSansMT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Broadcast Matter';
+    src: url('BroadcastMatter.woff2') format('woff2'),
+        url('BroadcastMatter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('GESSTextItalic-LightItalic.woff2') format('woff2'),
+        url('GESSTextItalic-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('GESSTextMedium-Medium.woff2') format('woff2'),
+        url('GESSTextMedium-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('GESSTextBold-Bold.woff2') format('woff2'),
+        url('GESSTextBold-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('GESSTextUltraLight-UltraLight.woff2') format('woff2'),
+        url('GESSTextUltraLight-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GE SS Text';
+    src: url('GESSTextLight-Light.woff2') format('woff2'),
+        url('GESSTextLight-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
