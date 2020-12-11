@@ -6,6 +6,7 @@ body{
 	font-family: 'GE SS Text';font-size:22px;font-weight: normal;
 	color:#000000;
 }
+.pointer{cursor: pointer;}
 a{color:#000000;}
 a:hover{color:#000000;text-decoration: none;}
 .grey{color:#6f7280;}
