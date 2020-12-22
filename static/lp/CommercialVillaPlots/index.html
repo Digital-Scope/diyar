@@ -81,8 +81,8 @@
 					<div class="col-sm-6 order-2 order-sm-1 mb-3" id="f-main">
 						<div class="padding-box-right fixedElement">
 							<div class="row hidemobile">
-								<div class="col-6 Gill font-20"><i class="fas fa-phone-alt fa-circle-blue pointer" id="icon_1"></i> <a href="tel:80008880" id="phone_1" class="hidden">8000 8880</a></div>
-								<div class="col-6 Gill font-20 text-left"><i class="fas fa-phone-alt fa-circle-green pointer" id="icon_2"></i> <a href="tel:0097377556606" id="phone_2" class="hidden">+973 77556606</a></div>
+								<div class="col-6 Gill font-20"><i class="fas fa-phone-alt fa-circle-blue pointer" id="icon_1"></i> <span id="local_1"><span class="hidden ar_text">محلي</span><span class="en_text">Local</span></span><a href="tel:80008880" id="phone_1" class="hidden">8000 8880</a></div>
+								<div class="col-6 Gill font-20 text-left"><i class="fas fa-phone-alt fa-circle-green pointer" id="icon_2"></i> <span id="local_2"><span class="hidden ar_text">دولي</span><span class="en_text">International</span></span><a href="tel:0097377556606" id="phone_2" class="hidden">+973 77556606</a></div>
 							</div>
 							<div class="spacer10 hidemobile"></div>
 							<div class="border-box">
@@ -261,9 +261,11 @@
   		}
   		$(document).ready(function(){
 			$("#icon_1").on('click',function(){
+				$("#local_1").hide();
 				$("#phone_1").show();
 			});
 			$("#icon_2").on('click',function(){
+				$("#local_2").hide();
 				$("#phone_2").show();
 			});
   			$("#en").on('click',function(){
