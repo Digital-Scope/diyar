@@ -23,7 +23,8 @@ function sendMail(data) {
     connectionTimeout: 5000,
     auth: {
       user: 'apikey',
-      pass: process.env.SENDGRID_API_KEY,
+      //pass: process.env.SENDGRID_API_KEY,
+      pass: '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',
     },
   });
 
