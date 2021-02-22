@@ -114,9 +114,9 @@ export default translate('labels')(
     handleSubmit: (values, { setSubmitting, setStatus }) => {
       setSubmitting(true);
       setStatus(null);
-
+      console.log("here");
       tracking.events.formsubmission({ formname: 'careers' });
-
+      console.log(process.env.GATSBY_CAREERS_HANDLER_URL);
       if (!process.env.GATSBY_CAREERS_HANDLER_URL) {
         console.warn('[CareersForm] no submission config set. Submission skipped.');
 
