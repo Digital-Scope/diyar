@@ -131,11 +131,15 @@ export default translate('labels')(
         .then(() => {
           setSubmitting(false);
           setStatus({ type: 'success', message: values.t('careersForm').formSuccess });
-        }).catch((e) => {
-          console.log(e);
+        }).catch(error => {
+          console.log(error);
           setSubmitting(false);
           setStatus({ type: 'error', message: values.t('careersForm').formFailure });
         });
+      /*.catch(() => {
+          setSubmitting(false);
+          setStatus({ type: 'error', message: values.t('careersForm').formFailure });
+        });*/
     },
   })(OuterForm),
 );
