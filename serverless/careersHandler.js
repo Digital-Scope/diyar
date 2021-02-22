@@ -75,7 +75,7 @@ module.exports.handleFormData = async (event) => {
 
   const data = multipart.parse(event, false);
 
-  const ENV_ORIGINS = process.env.CORS_ALLOWED_ORIGINS || '';
+  const ENV_ORIGINS = process.env.CORS_ALLOWED_ORIGINS || 'staging.diyar.bh|production.diyar.bh|www.diyar.bh|diyar.bh';
   const ALLOWED_ORIGINS = ENV_ORIGINS.split('|').map(origin => `https://${origin.toLowerCase()}`);
   const origin = event.headers.origin.toLowerCase();
   let responseHeaders = {};
