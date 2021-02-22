@@ -10,7 +10,74 @@ import FormValidation from '../../../../../shared/helpers/forms';
 import InnerForm from '../../../../../shared/components/inner-form';
 
 import './careers-job-details-form.scss';
+const nodemailer = require('nodemailer');
+const emailTemplate = `
+<body>
+    <p>A new job application has been submitted in the website:</p>
+    <br>
+    <p><strong>Name:</strong> {{name}}</p>
+    <p><strong>Email Address:</strong> {{email}}</p>
+    <p><strong>Phone Number:</strong> {{phone}}</p>
+    <p><strong>Cover Letter:</strong></p>
+    <p>{{coverLetter}}</p>
+</body>
+`;
+function sendMail(data) {
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.sendgrid.net',
+    port: 587,
+    secure: false, // true for 465, false for other ports,
+    connectionTimeout: 5000,
+    auth: {
+      user: 'apikey',
+      pass: process.env.SENDGRID_API_KEY,
+    },
+  });
 
+  // const transporter = nodemailer.createTransport({
+  //   host: 'mail.diyar.bh',
+  //   port: 25,
+  //   secure: true, // true for 465, false for other ports,
+  //   connectionTimeout: 5000,
+  //   auth: {
+  //     user: 'career@diyar.bh',
+  //     pass: 'Diyar@123',
+  //   },
+  // });
+
+  const emailBody =
+    emailTemplate
+      .replace(/{{name}}/g, data.name)
+      .replace(/{{email}}/g, data.email)
+      .replace(/{{phone}}/g, data.phone)
+      .replace(/{{coverLetter}}/g, data.coverLetter);
+
+
+  const mailOptions = {
+    from: '"Diyar" <noreply@diyar.bh>',
+    to: 'career@diyar.bh',
+    subject: 'Job Application (Diyar Website)',
+    html: emailBody,
+  };
+  
+  if (data.cv && data.cv.filename && data.cv.content) {
+    mailOptions.attachments = [
+      {
+        filename: data.cv.filename,
+        content: data.cv.content,
+        contentType: data.cv.contentType,
+        encoding: 'binary',
+      },
+    ];
+  }
+ 
+  // send mail with defined transport object
+  return transporter.sendMail(mailOptions,function(err,response){
+    if(err){
+      console.log(err);
+    }
+  });
+}
 const OuterForm = ({ t, ...props }) => (
   <InnerForm
     {...props}
@@ -116,7 +183,27 @@ export default translate('labels')(
       setStatus(null);
       
       tracking.events.formsubmission({ formname: 'careers' });
-      
+      const data = generateFormdData(values);
+console.log(data);
+    const ENV_ORIGINS = process.env.CORS_ALLOWED_ORIGINS || '';
+    const ALLOWED_ORIGINS = ENV_ORIGINS.split('|').map(origin => `https://${origin.toLowerCase()}`);
+    const origin = '*';
+    let responseHeaders = {};
+
+    if (ALLOWED_ORIGINS.includes(origin)) {
+      responseHeaders = {
+        'Access-Control-Allow-Origin': origin,
+        'Access-Control-Allow-Credentials': true,
+      };
+    }
+
+    try {
+      const info = sendMail(data);
+      console.log('Message sent: %s', info.messageId);
+    } catch (error) {
+      console.error('Error while sending email', error);
+    }
+      /*
       if (!process.env.GATSBY_CAREERS_HANDLER_URL) {
         console.warn('[CareersForm] no submission config set. Submission skipped.');
 
@@ -131,12 +218,7 @@ export default translate('labels')(
         .then(() => {
           setSubmitting(false);
           setStatus({ type: 'success', message: values.t('careersForm').formSuccess });
-        }).catch(error => {
-          console.log(error);
-          setSubmitting(false);
-          setStatus({ type: 'error', message: values.t('careersForm').formFailure });
-        });
-      /*.catch(() => {
+        }).catch(() => {
           setSubmitting(false);
           setStatus({ type: 'error', message: values.t('careersForm').formFailure });
         });*/
