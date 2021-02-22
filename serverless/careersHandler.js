@@ -52,7 +52,7 @@ function sendMail(data) {
     subject: 'Job Application (Diyar Website)',
     html: emailBody,
   };
-
+  
   if (data.cv && data.cv.filename && data.cv.content) {
     mailOptions.attachments = [
       {
@@ -63,9 +63,13 @@ function sendMail(data) {
       },
     ];
   }
-
+  console.log(mailOptions);
   // send mail with defined transport object
-  return transporter.sendMail(mailOptions);
+  return transporter.sendMail(mailOptions,function(err,response){
+    if(err){
+      console.log(err);
+    }
+  });
 }
 
 module.exports.handleFormData = async (event) => {
