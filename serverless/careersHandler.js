@@ -47,7 +47,7 @@ function sendMail(data) {
 
 
   const mailOptions = {
-    from: '"Diyar" <noreply@diyar.bh>',
+    from: '"Diyar" <corpcomm@diyar.bh>',
     to: 'career@diyar.bh',
     subject: 'Job Application (Diyar Website)',
     html: emailBody,
