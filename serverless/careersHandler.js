@@ -93,10 +93,10 @@ module.exports.handleFormData = async (event) => {
 
   try {
     const info = await sendMail(data);
-    console.log('Message sent: %s', info.messageId);
+    //console.log('Message sent: %s', info.messageId);
     return { statusCode: 202, headers: responseHeaders };
   } catch (error) {
-    console.error('Error while sending email', error);
+    //console.error('Error while sending email', error);
     return { statusCode: 501, headers: responseHeaders };
   }
 };
