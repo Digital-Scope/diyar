@@ -41,9 +41,6 @@
 	<script>
 		function gtag_report_conversion(url) {
 		  var callback = function () {
-			if (typeof(url) != 'undefined') {
-			  window.location = url;
-			}
 		  };
 		  gtag('event', 'conversion', {
 			  'send_to': 'AW-880431475/BFnWCMH_q_kBEPOi6aMD',
@@ -54,7 +51,7 @@
 		</script>
 		<script>
 			window.addEventListener('load', (event) => {
-				gtag_report_conversion('https://www.diyar.bh/lp/ThankYou/');
+				gtag_report_conversion('');
 			});
 		</script>
     </head>
