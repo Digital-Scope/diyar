@@ -1,6 +1,6 @@
 body{
 	background: rgb(255,255,255);
-	background: linear-gradient(0deg, rgba(255,255,255,1) 90%, rgba(183,183,182,1) 100%);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 90%, rgba(153,153,153,1) 100%);
 	background-repeat:no-repeat;
 	height:100%;
 	font-family: 'GE SS Text';font-size:22px;font-weight: normal;
