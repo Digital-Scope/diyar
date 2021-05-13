@@ -26,7 +26,7 @@ export default () => (
     <meta name="application-name" content="Diyar Al Muharraq" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
-
+    <meta name="facebook-domain-verification" content="ct5x17cdby8oh998krsz43c8a2y3n8" />
     <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
     <script>{`
       window.dataLayer = window.dataLayer || [];
