@@ -2,20 +2,6 @@
   "locale": "ar",
   "content": [
     {
-      "title": "العرض الخاص لفلل النسيم",
-      "sub_title": "رسوم خدمة مجانية لمدة 3 سنوات",
-      "button_text": "سجل الآن",
-      "url": "https://www.diyar.bh/lp/AlNaseem/?lang=ar",
-      "image_src": "/popup/al-naseem.jpg"
-    },
-    {
-      "title": "أراضي البارح",
-      "sub_title": "فرصة استثمارية لا مثيل لها في قطع أراضي البارح",
-      "button_text": "سجل الآن",
-      "url": "https://www.diyar.bh/lp/AlBareh/?lang=ar",
-      "image_src": "/popup/Al-Bareh.jpg"
-    },
-    {
       "title": "قسائم صالات العرض التجارية",
       "sub_title": "بدون رسوم تسجيل + تملك حر",
       "button_text": "سجل الآن",
@@ -28,13 +14,6 @@
       "button_text": "سجل الآن",
       "url": "https://www.diyar.bh/lp/CommercialVillaPlots/?lang=ar",
       "image_src": "/popup/Commercial-villas.jpg"
-    },
-    {
-      "title": "قسائم المستودعات",
-      "sub_title": "بدون رسوم تسجيل + تملك حر",
-      "button_text": "سجل الآن",
-      "url": "https://www.diyar.bh/lp/CommercialWarehousingPlots/?lang=ar",
-      "image_src": "/popup/warehouse.jpg"
     }
   ]
 }
