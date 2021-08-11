@@ -7,7 +7,7 @@ import cookie from 'react-cookies';
 import '../../../sass/style.scss';
 import './pop-up.scss';
 import Cta from '../../../contentful/components/cta/index';
-import { useLocation } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 export default class PopUp extends Component {
   constructor(props) {
@@ -20,8 +20,8 @@ export default class PopUp extends Component {
   }
   componentWillMount() {
     //this.setState({ isVisible: !cookie.load('isViewed') && this.isValidDate() });
-    const location = useLocation();
-    if(location.pathname=="/" || location.pathname=="/en" || location.pathname=="/ar"){
+    const {pathname} = this.props.location;
+    if(pathname=="/" || pathname=="/en" || pathname=="/ar"){
       this.setState({ isVisible: this.isValidDate() });
     }else{
       this.setState({ isVisible: false });
