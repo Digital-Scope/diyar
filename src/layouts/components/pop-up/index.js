@@ -19,7 +19,12 @@ export default class PopUp extends Component {
   }
   componentWillMount() {
     //this.setState({ isVisible: !cookie.load('isViewed') && this.isValidDate() });
-    this.setState({ isVisible: this.isValidDate() });
+    if(window.location.pathname=="/" || window.location.pathname=="/en" || window.location.pathname=="/ar"){
+      this.setState({ isVisible: this.isValidDate() });
+    }else{
+      this.setState({ isVisible: false });
+    }
+
   }
 
   isValidDate() {
