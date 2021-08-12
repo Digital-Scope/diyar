@@ -7,7 +7,6 @@ import cookie from 'react-cookies';
 import '../../../sass/style.scss';
 import './pop-up.scss';
 import Cta from '../../../contentful/components/cta/index';
-import useLocation from 'react-router-dom'
 
 export default class PopUp extends Component {
   constructor(props) {
@@ -17,7 +16,6 @@ export default class PopUp extends Component {
     this.state = {
       isVisible: false,
     };
-    this.location=useLocation();
   }
   componentWillMount() {
     //this.setState({ isVisible: !cookie.load('isViewed') && this.isValidDate() });
@@ -27,7 +25,7 @@ export default class PopUp extends Component {
   isValidDate() {
 
     console.log("abed");
-    console.log(this.location);
+    console.log(document.location);
     const currendDate = Date.now();
     if (currendDate >= this.StartDate && currendDate <= this.EndDate) return true;
     return false;
