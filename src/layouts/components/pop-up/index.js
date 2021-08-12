@@ -17,6 +17,7 @@ export default class PopUp extends Component {
     this.state = {
       isVisible: false,
     };
+    this.location=useLocation();
   }
   componentWillMount() {
     //this.setState({ isVisible: !cookie.load('isViewed') && this.isValidDate() });
@@ -24,14 +25,16 @@ export default class PopUp extends Component {
   }
 
   isValidDate() {
+
+    console.log("abed");
+    console.log(this.location);
     const currendDate = Date.now();
     if (currendDate >= this.StartDate && currendDate <= this.EndDate) return true;
     return false;
   }
   closeModal() {
     cookie.save('isViewed', true);
-    const location = useLocation();
-    console.log(location);
+
     this.setState({ isVisible: false });
   }
   render() {
