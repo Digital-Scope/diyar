@@ -7,7 +7,7 @@ import cookie from 'react-cookies';
 import '../../../sass/style.scss';
 import './pop-up.scss';
 import Cta from '../../../contentful/components/cta/index';
-import {useLocation} from 'react-router-dom'
+import useLocation from 'react-router-dom'
 
 export default class PopUp extends Component {
   constructor(props) {
