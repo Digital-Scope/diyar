@@ -23,9 +23,8 @@ export default class PopUp extends Component {
   }
 
   isValidDate() {
-
-    console.log("abed");
-    console.log(document.location);
+    console.log('abed');
+    console.log(this.props);
     const currendDate = Date.now();
     if (currendDate >= this.StartDate && currendDate <= this.EndDate) return true;
     return false;
