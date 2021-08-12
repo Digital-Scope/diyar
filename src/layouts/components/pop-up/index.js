@@ -7,6 +7,7 @@ import cookie from 'react-cookies';
 import '../../../sass/style.scss';
 import './pop-up.scss';
 import Cta from '../../../contentful/components/cta/index';
+import {useLocation} from 'react-router-dom'
 
 export default class PopUp extends Component {
   constructor(props) {
@@ -29,6 +30,8 @@ export default class PopUp extends Component {
   }
   closeModal() {
     cookie.save('isViewed', true);
+    const location = useLocation();
+    console.log(location);
     this.setState({ isVisible: false });
   }
   render() {
