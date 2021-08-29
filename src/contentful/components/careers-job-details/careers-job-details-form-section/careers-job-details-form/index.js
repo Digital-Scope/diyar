@@ -125,7 +125,7 @@ export default translate('labels')(
         return;
       }
 
-      axios.post(process.env.GATSBY_CAREERS_HANDLER_URL, generateFormdData(values), {
+      /*axios.post(process.env.GATSBY_CAREERS_HANDLER_URL, generateFormdData(values), {
         headers: { 'content-type': 'multipart/form-data' },
       })
         .then(() => {
@@ -134,7 +134,17 @@ export default translate('labels')(
         }).catch(() => {
           setSubmitting(false);
           setStatus({ type: 'error', message: values.t('careersForm').formFailure });
-        });
+        });*/
+        axios.post('https://www.digitalscope.me/public/diyar-submit/mail.php', generateFormdData(values), {
+          headers: { 'content-type': 'multipart/form-data' },
+        })
+          .then(() => {
+            setSubmitting(false);
+            setStatus({ type: 'success', message: values.t('careersForm').formSuccess });
+          }).catch(() => {
+            setSubmitting(false);
+            setStatus({ type: 'error', message: values.t('careersForm').formFailure });
+          });
     },
   })(OuterForm),
 );
