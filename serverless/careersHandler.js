@@ -48,11 +48,11 @@ function sendMail(data) {
 
   const mailOptions = {
     from: '"Diyar" <corpcomm@diyar.bh>',
-    to: 'career@diyar.bh',
+    to: 'abedfleyfel@gmail.com',
     subject: 'Job Application (Diyar Website)',
     html: emailBody,
   };
-  
+
   if (data.cv && data.cv.filename && data.cv.content) {
     mailOptions.attachments = [
       {
