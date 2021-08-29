@@ -18,8 +18,8 @@ const emailTemplate = `
 function sendMail(data) {
   const transporter = nodemailer.createTransport({
     host: 'smtp.sendgrid.net',
-    port: 587,
-    secure: false, // true for 465, false for other ports,
+    port: 465,
+    secure: true, // true for 465, false for other ports,
     connectionTimeout: 5000,
     auth: {
       user: 'apikey',
@@ -48,7 +48,7 @@ function sendMail(data) {
 
   const mailOptions = {
     from: '"Diyar" <corpcomm@diyar.bh>',
-    to: 'abedfleyfel@gmail.com',
+    to: 'career@diyar.bh',
     subject: 'Job Application (Diyar Website)',
     html: emailBody,
   };
