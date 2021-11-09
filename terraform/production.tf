@@ -1,6 +1,6 @@
 module "production-static-site" {
   source = "git@github.com:PrototypeInteractive/terraform-modules//static-site"
-  
+
   aws_region = "${var.aws_region}"
   environment = "production"
   github_organization = "${var.github_organization}"
@@ -12,7 +12,8 @@ module "production-static-site" {
     "diyar.bh",
     "www.diyar.bh",
     "production.diyar.bh",
-    "diyar-production.prototype-interactive.com"
+    "diyar-production.prototype-interactive.com",
+    "d3l5zed158ly2d.cloudfront.net"
   ]
 
   codebuild_environment_parameters = [

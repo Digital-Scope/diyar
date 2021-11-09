@@ -17,7 +17,7 @@ provider:
   apiKeys:
     - publishKey
   environment:
-    CORS_ALLOWED_ORIGINS: staging.diyar.bh|production.diyar.bh|www.diyar.bh|diyar.bh
+    CORS_ALLOWED_ORIGINS: staging.diyar.bh|production.diyar.bh|www.diyar.bh|diyar.bh|d3l5zed158ly2d.cloudfront.net
 
 functions:
   handleFormData:
